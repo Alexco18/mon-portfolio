@@ -17,8 +17,8 @@ header {
 
 /* Rectangle bleu ciel pour la présentation */
 .presentation {
-    background-color: #3A6EA5; /* Bleu ciel légèrement plus foncé */
-    color: white;
+    background-color: #F0F4F8; /* Fond gris clair pour la section présentation */
+    color: #333;
     text-align: justify; /* Justifier le texte */
     padding: 40px 20px;
     font-size: 1.2em;
@@ -115,4 +115,30 @@ footer {
 
 .download-button:hover {
     background-color: #2C497F; /* Change de couleur au survol */
+}
+
+/* Style spécifique à la page de projets scolaires */
+.projets-scolaires .presentation {
+    background-color: #F0F4F8; /* Fond gris clair pour la section présentation */
+    color: #333;
+    text-align: justify; /* Justifier le texte */
+    padding: 40px 20px;
+    font-size: 1.2em;
+    width: calc(100% - 40px); /* Largeur de 100% moins 40px pour les marges */
+    margin: 40px auto; /* Marge automatique pour centrer */
+    border-radius: 10px; /* Bords arrondis */
+    max-width: 2000px; /* Limite la largeur maximale à 2000px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce autour du rectangle */
+    background-color: #F0F4F8; /* Fond gris clair pour le rectangle */
+    border: 2px solid #3A6EA5; /* Bordure bleu clair */
+    padding-left: 60px; /* Décale le texte un peu plus sur la gauche */
+}
+
+/* Style de l'en-tête de la page projets scolaires */
+.projets-scolaires header {
+    background-color: #0A2239; /* Bleu foncé */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 2em;
 }
