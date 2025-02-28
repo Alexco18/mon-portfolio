@@ -19,7 +19,7 @@ header {
 .presentation {
     background-color: #3A6EA5; /* Bleu ciel légèrement plus foncé */
     color: white;
-    text-align: center;
+    text-align: justify; /* Justifier le texte */
     padding: 40px 20px; /* Augmenter la hauteur du rectangle */
     font-size: 1.2em;
     width: calc(100% - 40px); /* Largeur de 100% moins 40px pour les marges */
