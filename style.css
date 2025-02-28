@@ -38,7 +38,7 @@ header {
     max-width: 1200px; /* Limite la largeur des boutons */
 }
 
-/* Style des boutons */
+/* Style des boutons - liens cliquables */
 .button {
     background-color: #4A76A8; /* Bleu similaire à la section de présentation */
     color: white; /* Texte des boutons en blanc */
@@ -52,8 +52,10 @@ header {
     text-decoration: none; /* Supprimer le soulignement des liens */
     display: inline-block; /* Assure que les liens se comportent comme des boutons */
     text-align: center; /* Centre le texte du bouton */
+    box-sizing: border-box; /* Assure que le padding ne modifie pas la largeur du bouton */
 }
 
+/* Changement de couleur au survol */
 .button:hover {
     background-color: #2C497F; /* Changement de couleur au survol */
 }
