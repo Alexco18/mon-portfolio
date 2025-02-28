@@ -27,6 +27,32 @@ header {
     border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
 }
 
+/* Conteneur des boutons */
+.buttons-container {
+    display: flex;
+    justify-content: space-between; /* Aligne les boutons à gauche et à droite */
+    gap: 20px; /* Espace entre les boutons */
+    width: 80%; /* Largeur de la zone des boutons (même largeur que la présentation) */
+    margin: 30px auto; /* Marge pour que les boutons soient centrés */
+}
+
+/* Style des boutons */
+.button {
+    background-color: #4A76A8; /* Bleu similaire à la section de présentation */
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Taille du bouton */
+    font-size: 1em;
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer;
+    width: 45%; /* Les boutons auront la même largeur (45% pour 2 à gauche et 2 à droite) */
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #2C497F; /* Changement de couleur au survol */
+}
+
 /* Pied de page fixé en bas */
 footer {
     background-color: #2C497F; /* Bleu moins foncé que l'en-tête */
