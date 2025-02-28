@@ -15,11 +15,14 @@ header {
     font-size: 1.8em;
 }
 
-/* Rectangle bleu ciel plus foncé */
+/* Rectangle bleu ciel centré avec espace autour */
 .presentation {
     background-color: #3A6EA5; /* Bleu ciel légèrement plus foncé */
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px 20px; /* Espacement intérieur pour le texte */
     font-size: 1.2em;
+    width: 60%; /* Réduit la largeur du rectangle */
+    margin: 40px auto; /* Centre le rectangle et ajoute un espace au-dessus/en dessous */
+    border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
 }
