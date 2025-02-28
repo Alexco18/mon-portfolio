@@ -20,9 +20,9 @@ header {
     background-color: #3A6EA5; /* Bleu ciel légèrement plus foncé */
     color: white;
     text-align: center;
-    padding: 30px 20px; /* Réduction de l'espacement intérieur */
+    padding: 30px 20px; /* Espacement intérieur */
     font-size: 1.2em;
-    width: 80%; /* Augmentation de la largeur du rectangle */
+    width: 90%; /* Augmentation de la largeur du rectangle à 90% */
     margin: 20px auto; /* Réduction des marges extérieures */
     border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
 }
@@ -32,7 +32,7 @@ header {
     display: flex;
     justify-content: space-between; /* Aligne les boutons à gauche et à droite */
     gap: 20px; /* Espace entre les boutons */
-    width: 80%; /* Largeur de la zone des boutons (même largeur que la présentation) */
+    width: 90%; /* Largeur des boutons alignée avec la largeur du rectangle */
     margin: 30px auto; /* Marge pour que les boutons soient centrés */
 }
 
