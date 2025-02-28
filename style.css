@@ -1,4 +1,4 @@
-/* Style global */
+/* Réinitialisation des styles */
 * {
     margin: 0;
     padding: 0;
@@ -17,17 +17,15 @@ body {
     margin: 0 auto;
 }
 
-/* En-tête */
+/* En-tête (bleu foncé) */
 header {
-    background-color: #333;
+    background-color: #0A2239; /* Bleu foncé aéronautique */
     color: white;
     padding: 20px 0;
-}
-
-header h1 {
     text-align: center;
 }
 
+/* Navigation */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -45,7 +43,17 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Sections */
+/* Section Présentation (bleu ciel foncé) */
+.presentation {
+    background-color: #3A6EA5; /* Bleu ciel légèrement foncé */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Sections générales */
 section {
     padding: 40px 0;
     margin-bottom: 20px;
@@ -56,18 +64,20 @@ section h2 {
     margin-bottom: 20px;
 }
 
-/* Projets */
+/* Grille des projets */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
+/* Carte projet */
 .project {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .project h3 {
@@ -80,7 +90,7 @@ section h2 {
 
 /* Pied de page */
 footer {
-    background-color: #333;
+    background-color: #0A2239;
     color: white;
     text-align: center;
     padding: 20px 0;
