@@ -20,12 +20,12 @@ header {
     background-color: #3A6EA5; /* Bleu ciel légèrement plus foncé */
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px; /* Augmenter la hauteur du rectangle */
     font-size: 1.2em;
     width: calc(100% - 40px); /* Largeur de 100% moins 40px pour les marges */
-    margin: 20px auto; /* Marge automatique pour centrer */
+    margin: 40px auto; /* Marge automatique pour centrer */
     border-radius: 10px; /* Bords arrondis */
-    max-width: 1600px; /* Limite la largeur maximale à 1600px */
+    max-width: 2000px; /* Limite la largeur maximale à 2000px (plus large qu'avant) */
 }
 
 /* Conteneur des boutons */
@@ -34,8 +34,8 @@ header {
     justify-content: space-between;
     gap: 20px;
     width: calc(100% - 40px); /* Les boutons occupent la même largeur que le rectangle */
-    margin: 30px auto;
-    max-width: 1600px;
+    margin: 40px auto;
+    max-width: 2000px;
 }
 
 /* Style des boutons - liens cliquables */
@@ -47,7 +47,7 @@ header {
     font-size: 1em;
     border-radius: 5px; /* Coins arrondis */
     cursor: pointer;
-    width: 45%; /* Les boutons auront la même largeur (45% pour 2 à gauche et 2 à droite) */
+    width: 22%; /* Les boutons auront maintenant la même largeur et plus espacés */
     transition: background-color 0.3s;
     display: inline-block;
     text-align: center;
