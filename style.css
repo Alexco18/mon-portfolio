@@ -22,7 +22,7 @@ header {
     text-align: center;
     padding: 30px 20px; /* Espacement intérieur */
     font-size: 1.2em;
-    width: 90%; /* Augmentation de la largeur du rectangle à 90% */
+    width: 95%; /* Augmentation de la largeur du rectangle à 95% */
     margin: 20px auto; /* Réduction des marges extérieures */
     border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
 }
@@ -32,14 +32,14 @@ header {
     display: flex;
     justify-content: space-between; /* Aligne les boutons à gauche et à droite */
     gap: 20px; /* Espace entre les boutons */
-    width: 90%; /* Largeur des boutons alignée avec la largeur du rectangle */
+    width: 95%; /* Largeur des boutons alignée avec la largeur du rectangle */
     margin: 30px auto; /* Marge pour que les boutons soient centrés */
 }
 
 /* Style des boutons */
 .button {
     background-color: #4A76A8; /* Bleu similaire à la section de présentation */
-    color: white;
+    color: white; /* Texte des boutons en blanc */
     border: none;
     padding: 15px 30px; /* Taille du bouton */
     font-size: 1em;
@@ -47,6 +47,9 @@ header {
     cursor: pointer;
     width: 45%; /* Les boutons auront la même largeur (45% pour 2 à gauche et 2 à droite) */
     transition: background-color 0.3s;
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    display: inline-block; /* Assure que les liens se comportent comme des boutons */
+    text-align: center; /* Centre le texte du bouton */
 }
 
 .button:hover {
