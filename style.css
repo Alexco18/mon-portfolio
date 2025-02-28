@@ -22,9 +22,10 @@ header {
     text-align: center;
     padding: 30px 20px; /* Espacement intérieur */
     font-size: 1.2em;
-    width: 95%; /* Augmentation de la largeur du rectangle à 95% */
+    width: 90%; /* Augmentation de la largeur du rectangle à 90% */
     margin: 20px auto; /* Réduction des marges extérieures */
     border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
+    max-width: 1200px; /* Limite la largeur maximale pour plus de contrôle */
 }
 
 /* Conteneur des boutons */
@@ -32,8 +33,9 @@ header {
     display: flex;
     justify-content: space-between; /* Aligne les boutons à gauche et à droite */
     gap: 20px; /* Espace entre les boutons */
-    width: 95%; /* Largeur des boutons alignée avec la largeur du rectangle */
+    width: 90%; /* Largeur des boutons alignée avec la largeur du rectangle */
     margin: 30px auto; /* Marge pour que les boutons soient centrés */
+    max-width: 1200px; /* Limite la largeur des boutons */
 }
 
 /* Style des boutons */
