@@ -26,6 +26,10 @@ header {
     margin: 40px auto; /* Marge automatique pour centrer */
     border-radius: 10px; /* Bords arrondis */
     max-width: 2000px; /* Limite la largeur maximale à 2000px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce autour du rectangle */
+    background-color: #F0F4F8; /* Fond gris clair pour le rectangle */
+    border: 2px solid #3A6EA5; /* Bordure bleu clair */
+    padding-left: 60px; /* Décale le texte un peu plus sur la gauche */
 }
 
 /* Conteneur des boutons */
