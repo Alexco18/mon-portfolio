@@ -26,3 +26,15 @@ header {
     margin: 40px auto; /* Centre le rectangle et ajoute un espace au-dessus/en dessous */
     border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
 }
+
+/* Pied de page */
+footer {
+    background-color: #2C497F; /* Bleu moins foncé que l'en-tête */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
