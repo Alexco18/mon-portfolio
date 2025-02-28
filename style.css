@@ -27,14 +27,15 @@ header {
     border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
 }
 
-/* Pied de page */
+/* Pied de page fixé en bas */
 footer {
     background-color: #2C497F; /* Bleu moins foncé que l'en-tête */
     color: white;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    position: fixed; /* Fixe la position du pied de page */
+    bottom: 0; /* Positionne le pied de page en bas */
+    left: 0; /* Laisse le pied de page s'étendre sur toute la largeur */
+    width: 100%; /* Prend toute la largeur de la page */
 }
