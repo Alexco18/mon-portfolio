@@ -6,13 +6,13 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Rectangle bleu foncé (en-tête) */
+/* En-tête */
 header {
     background-color: #0A2239; /* Bleu foncé style aéronautique */
     color: white;
     text-align: center;
     padding: 40px 0;
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 /* Rectangle bleu ciel pour la présentation */
@@ -20,12 +20,12 @@ header {
     background-color: #3A6EA5; /* Bleu ciel légèrement plus foncé */
     color: white;
     text-align: justify; /* Justifier le texte */
-    padding: 40px 20px; /* Augmenter la hauteur du rectangle */
+    padding: 40px 20px;
     font-size: 1.2em;
     width: calc(100% - 40px); /* Largeur de 100% moins 40px pour les marges */
     margin: 40px auto; /* Marge automatique pour centrer */
     border-radius: 10px; /* Bords arrondis */
-    max-width: 2000px; /* Limite la largeur maximale à 2000px (plus large qu'avant) */
+    max-width: 2000px; /* Limite la largeur maximale à 2000px */
 }
 
 /* Conteneur des boutons */
@@ -72,4 +72,43 @@ footer {
     bottom: 0; /* Positionne le pied de page en bas */
     left: 0; /* Laisse le pied de page s'étendre sur toute la largeur */
     width: 100%; /* Prend toute la largeur de la page */
+}
+
+/* CV - Décalage du texte */
+.cv-content {
+    margin: 40px auto;
+    width: 80%; /* Prend 80% de la largeur de l'écran */
+    text-align: left;
+    padding-left: 40px; /* Décale le texte sur la droite */
+}
+
+/* Style pour les titres (h2) */
+.cv-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    color: #2C497F; /* Bleu clair */
+}
+
+/* Style pour le texte du CV */
+.cv-content p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Bouton de téléchargement du CV */
+.download-button {
+    background-color: #4A76A8; /* Couleur bleue */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #2C497F; /* Change de couleur au survol */
 }
