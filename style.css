@@ -15,17 +15,17 @@ header {
     font-size: 1.8em;
 }
 
-/* Rectangle bleu ciel centré avec espace autour */
+/* Rectangle bleu ciel centré avec marge */
 .presentation {
     background-color: #3A6EA5; /* Bleu ciel légèrement plus foncé */
     color: white;
     text-align: center;
     padding: 30px 20px; /* Espacement intérieur */
     font-size: 1.2em;
-    width: 90%; /* Augmentation de la largeur du rectangle à 90% */
-    margin: 20px auto; /* Réduction des marges extérieures */
+    width: calc(100% - 40px); /* Largeur de 100% moins 40px pour les marges */
+    margin: 20px auto; /* Marge automatique pour centrer */
     border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
-    max-width: 1200px; /* Limite la largeur maximale pour plus de contrôle */
+    max-width: 1200px; /* Limite la largeur maximale pour un contrôle */
 }
 
 /* Conteneur des boutons */
@@ -33,7 +33,7 @@ header {
     display: flex;
     justify-content: space-between; /* Aligne les boutons à gauche et à droite */
     gap: 20px; /* Espace entre les boutons */
-    width: 90%; /* Largeur des boutons alignée avec la largeur du rectangle */
+    width: calc(100% - 40px); /* Les boutons occupent la même largeur que le rectangle */
     margin: 30px auto; /* Marge pour que les boutons soient centrés */
     max-width: 1200px; /* Limite la largeur des boutons */
 }
