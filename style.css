@@ -20,10 +20,10 @@ header {
     background-color: #3A6EA5; /* Bleu ciel légèrement plus foncé */
     color: white;
     text-align: center;
-    padding: 50px 20px; /* Espacement intérieur pour le texte */
+    padding: 30px 20px; /* Réduction de l'espacement intérieur */
     font-size: 1.2em;
-    width: 60%; /* Réduit la largeur du rectangle */
-    margin: 40px auto; /* Centre le rectangle et ajoute un espace au-dessus/en dessous */
+    width: 80%; /* Augmentation de la largeur du rectangle */
+    margin: 20px auto; /* Réduction des marges extérieures */
     border-radius: 10px; /* Bords arrondis pour un effet plus moderne */
 }
 
