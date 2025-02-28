@@ -36,6 +36,7 @@ header {
     width: calc(100% - 40px); /* Les boutons occupent la même largeur que le rectangle */
     margin: 40px auto;
     max-width: 2000px;
+    flex-wrap: wrap; /* Permet de mettre les boutons sur plusieurs lignes si nécessaire */
 }
 
 /* Style des boutons - liens cliquables */
@@ -43,11 +44,11 @@ header {
     background-color: #4A76A8; /* Bleu similaire à la section de présentation */
     color: white; /* Texte des boutons en blanc */
     border: none;
-    padding: 15px 30px;
+    padding: 20px 30px; /* Hauteur des boutons augmentée */
     font-size: 1em;
     border-radius: 5px; /* Coins arrondis */
     cursor: pointer;
-    width: 22%; /* Les boutons auront maintenant la même largeur et plus espacés */
+    width: 48%; /* Permet d'avoir 2 boutons par ligne */
     transition: background-color 0.3s;
     display: inline-block;
     text-align: center;
