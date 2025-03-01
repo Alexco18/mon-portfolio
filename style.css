@@ -142,7 +142,6 @@ footer {
 }
 
 /* ✅ NOUVELLE SECTION : Mise en page des projets scolaires */
-
 /* Conteneur des années */
 .years-container {
     width: 80%;
@@ -150,7 +149,7 @@ footer {
     text-align: center;
 }
 
-/* Style des blocs années */
+/* Style des blocs années (même largeur que la présentation) */
 .year {
     background-color: #0A2239; /* Bleu foncé */
     color: white;
@@ -160,22 +159,25 @@ footer {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    width: 60%;
+    width: calc(100% - 40px); /* Ajuste la largeur */
+    max-width: 2000px; /* Même largeur max que la présentation */
     text-align: center;
 }
 
+/* Effet au survol */
 .year:hover {
     background-color: #3A6EA5; /* Bleu plus clair */
-    transform: scale(1.05); /* Légère augmentation de taille au survol */
+    transform: scale(1.02);
 }
 
-/* Conteneur des projets (caché par défaut) */
+/* Conteneur des projets (caché par défaut, même largeur que la présentation) */
 .projects {
     background-color: #F0F4F8;
     color: #333;
     padding: 20px;
     border-radius: 10px;
-    width: 60%;
+    width: calc(100% - 40px); /* Même largeur que la présentation */
+    max-width: 2000px; /* Largeur maximale */
     margin: 10px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: max-height 0.5s ease-out, opacity 0.3s;
