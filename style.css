@@ -233,3 +233,13 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Séparateur entre les projets */
+.separator {
+    width: 100%;
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: #3A6EA5; /* Couleur bleu clair */
+    margin: 20px 0; /* Espacement entre les projets */
+    border-radius: 5px;
+}
+
+
