@@ -138,7 +138,7 @@ header {
     width: 100%;
 }
 
-/* 🔹 Rectangle "Résultat(s)" */
+/* Rectangle "Résultat(s)" */
 .project-results {
     background-color: #0A2239;
     color: white;
@@ -146,13 +146,14 @@ header {
     font-size: 1.2em;
     text-align: center;
     width: 50%;
-    height: 50vh;
+    height: calc(10vh + 40vh + 15px); /* Hauteur totale des rectangles de gauche + l’espace entre eux */
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
+
 
 /* 🔹 Centrer le texte des rectangles */
 .project-name, .project-objective, .project-results {
