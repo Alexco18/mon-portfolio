@@ -17,38 +17,69 @@ header {
 
 /* Rectangle bleu ciel pour la présentation */
 .presentation {
-    background-color: #F0F4F8; /* Fond gris clair pour la section présentation */
+    background-color: #F0F4F8;
     color: #333;
-    text-align: justify; /* Justifier le texte */
+    text-align: justify;
     padding: 40px 20px;
     font-size: 1.2em;
-    width: calc(100% - 40px); /* Largeur de 100% moins 40px pour les marges */
-    margin: 40px auto; /* Marge automatique pour centrer */
-    border-radius: 10px; /* Bords arrondis */
-    max-width: 2000px; /* Limite la largeur maximale à 2000px */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce autour du rectangle */
-    background-color: #F0F4F8; /* Fond gris clair pour le rectangle */
-    border: 2px solid #3A6EA5; /* Bordure bleu clair */
-    padding-left: 60px; /* Décale le texte un peu plus sur la gauche */
+    width: calc(100% - 40px);
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 2000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #3A6EA5;
+    padding-left: 60px;
 }
 
-/* Conteneur des années */
+/* 🔹 Conteneur des boutons */
+.buttons-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permet d'aller à la ligne si l'écran est trop petit */
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+/* 🔹 Style des boutons */
+.button {
+    background-color: #4A76A8;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 45%; /* Deux boutons par ligne */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Changement de couleur et effet au survol */
+.button:hover {
+    background-color: #2C497F;
+    transform: scale(1.05);
+}
+
+/* 📌 Conteneur des années */
 .years-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Espacement uniforme entre les années */
+    gap: 10px;
     margin-top: 20px;
 }
 
 /* Style des années */
 .year {
-    background-color: #0A2239; /* Bleu foncé */
+    background-color: #0A2239;
     color: white;
     padding: 20px;
     font-size: 1.5em;
     text-align: center;
-    width: calc(100% - 40px); /* Même largeur que la présentation */
+    width: calc(100% - 40px);
     max-width: 2000px;
     border-radius: 10px;
     cursor: pointer;
@@ -56,25 +87,25 @@ header {
 }
 
 .year:hover {
-    background-color: #3A6EA5; /* Bleu plus clair au survol */
+    background-color: #3A6EA5;
 }
 
-/* Conteneur des projets (affiché sous chaque année) */
+/* Conteneur des projets */
 .projects {
-    display: none; /* Caché par défaut */
+    display: none;
     width: calc(100% - 40px);
     max-width: 2000px;
     margin: 10px auto;
 }
 
-/* Espacement uniforme entre chaque projet */
+/* 📌 Organisation des projets */
 .project-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px; /* Ajoute un petit espace fixe entre les blocs */
+    gap: 10px;
     width: 100%;
-    margin-top: 10px; /* Espacement au-dessus du projet */
+    margin-top: 10px;
 }
 
 /* Colonne de gauche */
@@ -85,29 +116,27 @@ header {
     width: 50%;
 }
 
-/* Rectangle "Nom du projet" */
-.project-name,
-.project-objective {
+/* 🔹 Style des blocs projets */
+.project-name, .project-objective {
     background-color: #3A6EA5;
     color: white;
     padding: 15px;
     font-size: 1.2em;
     text-align: center;
     border-radius: 5px;
-    height: 10vh; /* Hauteur fixe */
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Rectangle "Objectif(s)" */
+/* Objectifs */
 .project-objective {
     background-color: #2C497F;
     height: 40vh;
-    width: 100%;
 }
 
-/* Rectangle "Résultat(s)" */
+/* Résultats */
 .project-results {
     background-color: #0A2239;
     color: white;
@@ -123,12 +152,12 @@ header {
     overflow: hidden;
 }
 
-/* Centrer le texte des rectangles */
+/* Centrer le texte */
 .project-name, .project-objective, .project-results {
     font-weight: bold;
 }
 
-/* Effet de survol */
+/* Effet au survol */
 .project-name:hover, .project-objective:hover, .project-results:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
