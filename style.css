@@ -151,7 +151,7 @@ header {
     font-size: 1.2em;
     text-align: left;  /* Aligne le texte à gauche */
     width: 50%;
-    height: 50vh;
+    height: 40vh;  /* Réajuste la hauteur pour la rendre égale aux autres rectangles */
     border-radius: 5px;
     display: flex;
     flex-direction: column;  /* Ajoute cette ligne */
