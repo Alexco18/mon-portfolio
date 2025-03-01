@@ -252,5 +252,30 @@ footer {
     width: 100%; /* S'assure que tout est bien centré */
 }
 
+/* 🔹 Style général des années */
+.year {
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 🔹 Couleur spécifique par année */
+.year-2024 { background-color: #2E8B57; } /* Vert foncé */
+.year-2023 { background-color: #3A6EA5; } /* Bleu */
+.year-2022 { background-color: #D2691E; } /* Marron */
+.year-2021 { background-color: #8B0000; } /* Rouge foncé */
+
+/* 🔹 Effet de survol */
+.year:hover {
+    filter: brightness(1.2);
+}
+
+
 
 
