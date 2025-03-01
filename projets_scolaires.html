@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes projets scolaires</title>
     <link rel="stylesheet" href="style.css"> <!-- Lien vers ton fichier CSS -->
+    <script defer>
+        // Script pour afficher/masquer les projets lorsqu'on clique sur une année
+        document.addEventListener("DOMContentLoaded", function() {
+            const years = document.querySelectorAll(".year");
+            years.forEach(year => {
+                year.addEventListener("click", function() {
+                    const target = this.getAttribute("data-target");
+                    const projects = document.getElementById(target);
+                    if (projects.classList.contains("hidden")) {
+                        projects.classList.remove("hidden");
+                    } else {
+                        projects.classList.add("hidden");
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
+
     <!-- En-tête bleu foncé -->
     <header>
         Mes projets scolaires
@@ -19,22 +37,61 @@
 
     <!-- Conteneur des années -->
     <div class="years-container">
-        <div class="year" onclick="toggleProjects('projects-2024')">2024 - 2025</div>
-        <div id="projects-2024" class="projects hidden">
-            <h3>Projet 1 : Développement d'un site web</h3>
-            <p>Création d’un site web interactif avec HTML, CSS et JavaScript.</p>
-        </div>
+        <div class="year" data-target="projects-2024">2024 - 2025</div>
+        <div class="year" data-target="projects-2023">2023 - 2024</div>
+        <div class="year" data-target="projects-2022">2022 - 2023</div>
+    </div>
 
-        <div class="year" onclick="toggleProjects('projects-2023')">2023 - 2024</div>
-        <div id="projects-2023" class="projects hidden">
-            <h3>Projet 2 : Analyse de données</h3>
-            <p>Utilisation de Python et Pandas pour analyser un jeu de données.</p>
+    <!-- Conteneur des projets (2024 - 2025) -->
+    <div id="projects-2024" class="projects hidden">
+        <div class="project-container">
+            <div class="project-left">
+                <div class="project-name">Nom du projet : Conception d’un Drone</div>
+                <div class="project-objective">Objectif(s) : Développer un drone autonome</div>
+            </div>
+            <div class="project-results">
+                Résultat(s) : <br>
+                <img src="chemin-de-l-image.jpg" alt="Image du projet" width="80%">
+            </div>
         </div>
+        
+        <div class="project-container">
+            <div class="project-left">
+                <div class="project-name">Nom du projet : Analyse de Données</div>
+                <div class="project-objective">Objectif(s) : Étudier des tendances en IA</div>
+            </div>
+            <div class="project-results">
+                Résultat(s) : <br>
+                <video src="chemin-de-la-video.mp4" controls width="80%"></video>
+            </div>
+        </div>
+    </div>
 
-        <div class="year" onclick="toggleProjects('projects-2022')">2022 - 2023</div>
-        <div id="projects-2022" class="projects hidden">
-            <h3>Projet 3 : Robotique</h3>
-            <p>Conception et programmation d'un robot mobile avec Arduino.</p>
+    <!-- Conteneur des projets (2023 - 2024) -->
+    <div id="projects-2023" class="projects hidden">
+        <div class="project-container">
+            <div class="project-left">
+                <div class="project-name">Nom du projet : Site Web Dynamique</div>
+                <div class="project-objective">Objectif(s) : Créer un site avec une base de données</div>
+            </div>
+            <div class="project-results">
+                Résultat(s) : <br>
+                <img src="chemin-de-l-image2.jpg" alt="Image du projet" width="80%">
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteneur des projets (2022 - 2023) -->
+    <div id="projects-2022" class="projects hidden">
+        <div class="project-container">
+            <div class="project-left">
+                <div class="project-name">Nom du projet : Robotique</div>
+                <div class="project-objective">Objectif(s) : Construire un robot autonome</div>
+            </div>
+            <div class="project-results">
+                Résultat(s) : <br>
+                <img src="chemin-de-l-image3.jpg" alt="Image du projet" width="80%">
+            </div>
         </div>
     </div>
 
@@ -44,16 +101,5 @@
         <p>Dernière mise à jour : 01/03/2025</p>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        function toggleProjects(id) {
-            let projects = document.getElementById(id);
-            if (projects.classList.contains("hidden")) {
-                projects.classList.remove("hidden");
-            } else {
-                projects.classList.add("hidden");
-            }
-        }
-    </script>
 </body>
 </html>
