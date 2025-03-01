@@ -12,18 +12,30 @@
         Mes projets scolaires
     </header>
 
-    <!-- Contenu des projets scolaires -->
+    <!-- Rectangle de présentation -->
     <div class="presentation">
-        <p>Bienvenue dans la section de mes projets scolaires. Ici, vous trouverez tous les projets réalisés durant mes études, classés par ordre chronologique ou par sujet.</p>
-        
-        <!-- Exemple de projet scolaire -->
-        <h2>Projet 1 : Développement d'un site web</h2>
-        <p>Description du projet...</p>
+        <p>Bienvenue dans la section de mes projets scolaires. Ici, vous trouverez tous les projets réalisés durant mes études, classés par année.</p>
+    </div>
 
-        <h2>Projet 2 : Analyse de données</h2>
-        <p>Description du projet...</p>
+    <!-- Conteneur des années -->
+    <div class="years-container">
+        <div class="year" onclick="toggleProjects('projects-2024')">2024 - 2025</div>
+        <div id="projects-2024" class="projects hidden">
+            <h3>Projet 1 : Développement d'un site web</h3>
+            <p>Création d’un site web interactif avec HTML, CSS et JavaScript.</p>
+        </div>
 
-        <!-- Ajoute d'autres projets au besoin -->
+        <div class="year" onclick="toggleProjects('projects-2023')">2023 - 2024</div>
+        <div id="projects-2023" class="projects hidden">
+            <h3>Projet 2 : Analyse de données</h3>
+            <p>Utilisation de Python et Pandas pour analyser un jeu de données.</p>
+        </div>
+
+        <div class="year" onclick="toggleProjects('projects-2022')">2022 - 2023</div>
+        <div id="projects-2022" class="projects hidden">
+            <h3>Projet 3 : Robotique</h3>
+            <p>Conception et programmation d'un robot mobile avec Arduino.</p>
+        </div>
     </div>
 
     <!-- Pied de page -->
@@ -31,5 +43,17 @@
         <p>&copy; 2025 CORRE Alexandre - Tous droits réservés</p>
         <p>Dernière mise à jour : 01/03/2025</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleProjects(id) {
+            let projects = document.getElementById(id);
+            if (projects.classList.contains("hidden")) {
+                projects.classList.remove("hidden");
+            } else {
+                projects.classList.add("hidden");
+            }
+        }
+    </script>
 </body>
 </html>
