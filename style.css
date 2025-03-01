@@ -78,37 +78,6 @@ footer {
     width: 100%; /* Prend toute la largeur de la page */
 }
 
-/* Style pour les titres (h2) */
-.cv-content h2 {
-    margin-bottom: 10px;
-    font-size: 1.6em;
-    color: #2C497F; /* Bleu clair */
-}
-
-/* Style pour le texte du CV */
-.cv-content p {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-/* Bouton de téléchargement du CV */
-.download-button {
-    background-color: #4A76A8; /* Couleur bleue */
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.download-button:hover {
-    background-color: #2C497F; /* Change de couleur au survol */
-}
-
 /* Projet scolaire - Conteneur avec les années */
 .project-container {
     display: flex;
@@ -167,7 +136,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px; /* Ajoute une petite marge sous le "Nom du projet" */
 }
 
 /* Rectangle "Objectif(s)" */
