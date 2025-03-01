@@ -32,100 +32,62 @@ header {
     padding-left: 60px; /* Décale le texte un peu plus sur la gauche */
 }
 
-/* Conteneur des boutons */
-.buttons-container {
+/* Conteneur des années */
+.years-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: calc(100% - 40px); /* Les boutons occupent la même largeur que le rectangle */
-    margin: 40px auto;
-    max-width: 2000px;
-    flex-wrap: wrap; /* Permet de mettre les boutons sur plusieurs lignes si nécessaire */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacement uniforme entre les années */
+    margin-top: 20px;
 }
 
-/* Style des boutons - liens cliquables */
-.button {
-    background-color: #4A76A8; /* Bleu similaire à la section de présentation */
-    color: white; /* Texte des boutons en blanc */
-    border: none;
-    padding: 20px 30px; /* Hauteur des boutons augmentée */
-    font-size: 1em;
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer;
-    width: 48%; /* Permet d'avoir 2 boutons par ligne */
-    transition: background-color 0.3s;
-    display: inline-block;
-    text-align: center;
-    box-sizing: border-box; /* Assure que le padding ne modifie pas la largeur du bouton */
-    text-decoration: none; /* Supprimer le soulignement des liens */
-}
-
-/* Changement de couleur au survol */
-.button:hover {
-    background-color: #2C497F; /* Changement de couleur au survol */
-}
-
-/* Pied de page fixé en bas */
-footer {
-    background-color: #2C497F; /* Bleu moins foncé que l'en-tête */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-    position: fixed; /* Fixe la position du pied de page */
-    bottom: 0; /* Positionne le pied de page en bas */
-    left: 0; /* Laisse le pied de page s'étendre sur toute la largeur */
-    width: 100%; /* Prend toute la largeur de la page */
-}
-
-/* Projet scolaire - Conteneur avec les années */
-.project-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 40px auto;
-    max-width: 2000px;
-}
-
-/* Conteneur pour chaque année */
-.year-box {
+/* Style des années */
+.year {
     background-color: #0A2239; /* Bleu foncé */
     color: white;
-    text-align: center;
-    font-size: 1.5em;
-    width: 32%; /* Réduit à 3 rectangles par ligne */
     padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    width: calc(100% - 40px); /* Même largeur que la présentation */
+    max-width: 2000px;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-/* Au survol des années */
-.year-box:hover {
-    background-color: #2C497F;
+.year:hover {
+    background-color: #3A6EA5; /* Bleu plus clair au survol */
 }
 
-/* Section "projets" avec les détails des projets */
-.project-detail {
+/* Conteneur des projets (affiché sous chaque année) */
+.projects {
+    display: none; /* Caché par défaut */
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    margin: 10px auto;
+}
+
+/* Espacement uniforme entre chaque projet */
+.project-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    align-items: center;
+    gap: 10px; /* Ajoute un petit espace fixe entre les blocs */
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px; /* Espacement au-dessus du projet */
 }
 
 /* Colonne de gauche */
 .project-left {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Augmenter l'espacement entre les rectangles de gauche */
+    gap: 10px;
     width: 50%;
 }
 
 /* Rectangle "Nom du projet" */
-.project-name {
+.project-name,
+.project-objective {
     background-color: #3A6EA5;
     color: white;
     padding: 15px;
@@ -141,9 +103,8 @@ footer {
 /* Rectangle "Objectif(s)" */
 .project-objective {
     background-color: #2C497F;
-    height: 45vh; /* Augmentation de la longueur pour ajouter de l'espace */
+    height: 40vh;
     width: 100%;
-    margin-bottom: 10px; /* Ajoute une petite marge sous le "Objectif(s)" */
 }
 
 /* Rectangle "Résultat(s)" */
@@ -154,10 +115,21 @@ footer {
     font-size: 1.2em;
     text-align: center;
     width: 50%;
-    height: 55vh; /* Augmentation de la hauteur pour un bon équilibre */
+    height: 50vh;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+/* Centrer le texte des rectangles */
+.project-name, .project-objective, .project-results {
+    font-weight: bold;
+}
+
+/* Effet de survol */
+.project-name:hover, .project-objective:hover, .project-results:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
 }
