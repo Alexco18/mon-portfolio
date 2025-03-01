@@ -136,23 +136,29 @@ header {
     background-color: #2C497F;
     height: 40vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;  /* Ajoute cette ligne */
+    justify-content: flex-start;  /* Alignement vertical en haut */
+    align-items: flex-start;  /* Alignement horizontal à gauche */
+    padding: 15px;  /* Ajoute un peu de padding pour éviter que le texte ne touche les bords */
 }
 
-/* Rectangle "Résultat(s)" */
+/* 🔹 Rectangle "Résultat(s)" */
 .project-results {
     background-color: #0A2239;
     color: white;
     padding: 15px;
     font-size: 1.2em;
-    text-align: center;
+    text-align: left;  /* Aligne le texte à gauche */
     width: 50%;
-    height: calc(10vh + 40vh + 15px); /* Hauteur totale des rectangles de gauche + l’espace entre eux */
+    height: 50vh;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    flex-direction: column;  /* Ajoute cette ligne */
+    justify-content: flex-start;  /* Alignement vertical en haut */
+    align-items: flex-start;  /* Alignement horizontal à gauche */
 }
+
 
 
 /* 🔹 Centrer le texte des rectangles */
