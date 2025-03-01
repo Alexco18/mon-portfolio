@@ -5,92 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes projets scolaires</title>
     <link rel="stylesheet" href="style.css"> <!-- Lien vers ton fichier CSS -->
-    <script defer>
-        // Script pour afficher/masquer les projets lorsqu'on clique sur une année
-        document.addEventListener("DOMContentLoaded", function() {
-            const years = document.querySelectorAll(".year");
-            years.forEach(year => {
-                year.addEventListener("click", function() {
-                    const target = this.getAttribute("data-target");
-                    const projects = document.getElementById(target);
-                    if (projects.classList.contains("hidden")) {
-                        projects.classList.remove("hidden");
-                    } else {
-                        projects.classList.add("hidden");
-                    }
-                });
-            });
-        });
-    </script>
 </head>
 <body>
-
     <!-- En-tête bleu foncé -->
     <header>
         Mes projets scolaires
     </header>
 
-    <!-- Rectangle de présentation -->
+    <!-- Contenu de la présentation -->
     <div class="presentation">
-        <p>Bienvenue dans la section de mes projets scolaires. Ici, vous trouverez tous les projets réalisés durant mes études, classés par année.</p>
+        <p>Bienvenue dans la section de mes projets scolaires. Ici, vous trouverez tous les projets réalisés durant mes études, classés par ordre chronologique ou par sujet.</p>
     </div>
 
     <!-- Conteneur des années -->
     <div class="years-container">
         <div class="year" data-target="projects-2024">2024 - 2025</div>
+        <div id="projects-2024" class="projects">
+            <div class="project-container">
+                <div class="project-left">
+                    <div class="project-name">Nom du projet : Conception d’un Drone</div>
+                    <div class="project-objective">Objectif(s) : Développer un drone autonome</div>
+                </div>
+                <div class="project-results">
+                    Résultat(s) : <br>
+                    <img src="chemin-de-l-image.jpg" alt="Image du projet" width="80%">
+                </div>
+            </div>
+        </div>
+
         <div class="year" data-target="projects-2023">2023 - 2024</div>
+        <div id="projects-2023" class="projects">
+            <div class="project-container">
+                <div class="project-left">
+                    <div class="project-name">Nom du projet : Site Web Dynamique</div>
+                    <div class="project-objective">Objectif(s) : Créer un site avec une base de données</div>
+                </div>
+                <div class="project-results">
+                    Résultat(s) : <br>
+                    <img src="chemin-de-l-image2.jpg" alt="Image du projet" width="80%">
+                </div>
+            </div>
+        </div>
+
         <div class="year" data-target="projects-2022">2022 - 2023</div>
-    </div>
-
-    <!-- Conteneur des projets (2024 - 2025) -->
-    <div id="projects-2024" class="projects hidden">
-        <div class="project-container">
-            <div class="project-left">
-                <div class="project-name">Nom du projet : Conception d’un Drone</div>
-                <div class="project-objective">Objectif(s) : Développer un drone autonome</div>
-            </div>
-            <div class="project-results">
-                Résultat(s) : <br>
-                <img src="chemin-de-l-image.jpg" alt="Image du projet" width="80%">
-            </div>
-        </div>
-        
-        <div class="project-container">
-            <div class="project-left">
-                <div class="project-name">Nom du projet : Analyse de Données</div>
-                <div class="project-objective">Objectif(s) : Étudier des tendances en IA</div>
-            </div>
-            <div class="project-results">
-                Résultat(s) : <br>
-                <video src="chemin-de-la-video.mp4" controls width="80%"></video>
-            </div>
-        </div>
-    </div>
-
-    <!-- Conteneur des projets (2023 - 2024) -->
-    <div id="projects-2023" class="projects hidden">
-        <div class="project-container">
-            <div class="project-left">
-                <div class="project-name">Nom du projet : Site Web Dynamique</div>
-                <div class="project-objective">Objectif(s) : Créer un site avec une base de données</div>
-            </div>
-            <div class="project-results">
-                Résultat(s) : <br>
-                <img src="chemin-de-l-image2.jpg" alt="Image du projet" width="80%">
-            </div>
-        </div>
-    </div>
-
-    <!-- Conteneur des projets (2022 - 2023) -->
-    <div id="projects-2022" class="projects hidden">
-        <div class="project-container">
-            <div class="project-left">
-                <div class="project-name">Nom du projet : Robotique</div>
-                <div class="project-objective">Objectif(s) : Construire un robot autonome</div>
-            </div>
-            <div class="project-results">
-                Résultat(s) : <br>
-                <img src="chemin-de-l-image3.jpg" alt="Image du projet" width="80%">
+        <div id="projects-2022" class="projects">
+            <div class="project-container">
+                <div class="project-left">
+                    <div class="project-name">Nom du projet : Robotique</div>
+                    <div class="project-objective">Objectif(s) : Construire un robot autonome</div>
+                </div>
+                <div class="project-results">
+                    Résultat(s) : <br>
+                    <img src="chemin-de-l-image3.jpg" alt="Image du projet" width="80%">
+                </div>
             </div>
         </div>
     </div>
@@ -100,6 +67,27 @@
         <p>&copy; 2025 CORRE Alexandre - Tous droits réservés</p>
         <p>Dernière mise à jour : 01/03/2025</p>
     </footer>
+
+    <!-- Script JS pour afficher/cacher les projets -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            const years = document.querySelectorAll(".year");
+
+            years.forEach(year => {
+                year.addEventListener("click", function() {
+                    const target = this.getAttribute("data-target");
+                    const projects = document.getElementById(target);
+
+                    // Vérifie si la section est déjà visible
+                    if (projects.style.display === "none" || projects.style.display === "") {
+                        projects.style.display = "block"; // Affiche la section
+                    } else {
+                        projects.style.display = "none"; // Cache la section
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
