@@ -216,3 +216,19 @@ footer {
 .download-button:hover {
     background-color: #2C497F;
 }
+
+/* 🔹 Rectangle sous l'en-tête */
+.top-banner {
+    background-color: #1C3D5A; /* Bleu foncé, mais moins foncé que l'en-tête */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
