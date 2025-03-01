@@ -19,244 +19,117 @@ header {
 .presentation {
     background-color: #F0F4F8; /* Fond gris clair pour la section présentation */
     color: #333;
-    text-align: justify;
+    text-align: justify; /* Justifier le texte */
     padding: 40px 20px;
     font-size: 1.2em;
     width: calc(100% - 40px); /* Largeur de 100% moins 40px pour les marges */
-    margin: 40px auto;
-    border-radius: 10px;
-    max-width: 2000px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #3A6EA5;
-    padding-left: 60px;
+    margin: 40px auto; /* Marge automatique pour centrer */
+    border-radius: 10px; /* Bords arrondis */
+    max-width: 2000px; /* Limite la largeur maximale à 2000px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce autour du rectangle */
+    background-color: #F0F4F8; /* Fond gris clair pour le rectangle */
+    border: 2px solid #3A6EA5; /* Bordure bleu clair */
+    padding-left: 60px; /* Décale le texte un peu plus sur la gauche */
 }
 
-/* Conteneur des boutons */
-.buttons-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: calc(100% - 40px);
-    margin: 40px auto;
-    max-width: 2000px;
-    flex-wrap: wrap;
-}
-
-/* Style des boutons */
-.button {
-    background-color: #4A76A8;
-    color: white;
-    border: none;
-    padding: 20px 30px;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 48%;
-    transition: background-color 0.3s;
-    display: inline-block;
-    text-align: center;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-/* Changement de couleur au survol */
-.button:hover {
-    background-color: #2C497F;
-}
-
-/* Pied de page fixé en bas */
-footer {
-    background-color: #2C497F;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-/* CV - Décalage du texte */
-.cv-content {
-    margin: 40px auto;
-    width: 80%;
-    text-align: left;
-    padding-left: 40px;
-}
-
-/* Style pour les titres (h2) */
-.cv-content h2 {
-    margin-bottom: 10px;
-    font-size: 1.6em;
-    color: #2C497F;
-}
-
-/* Style pour le texte du CV */
-.cv-content p {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-/* Bouton de téléchargement du CV */
-.download-button {
-    background-color: #4A76A8;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.download-button:hover {
-    background-color: #2C497F;
-}
-
-/* Style spécifique à la page de projets scolaires */
-.projets-scolaires .presentation {
-    background-color: #F0F4F8;
-    color: #333;
-    text-align: justify;
-    padding: 40px 20px;
-    font-size: 1.2em;
-    width: calc(100% - 40px);
-    margin: 40px auto;
-    border-radius: 10px;
-    max-width: 2000px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #3A6EA5;
-    padding-left: 60px;
-}
-
-/* Style de l'en-tête de la page projets scolaires */
-.projets-scolaires header {
-    background-color: #0A2239;
-    color: white;
-    text-align: center;
-    padding: 40px 0;
-    font-size: 2em;
-}
-
-/* ✅ NOUVELLE SECTION : Mise en page des projets scolaires */
 /* Conteneur des années */
 .years-container {
-    width: 80%;
-    margin: 20px auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacement uniforme entre les années */
+    margin-top: 20px;
 }
 
-/* Style des blocs années (même largeur que la présentation) */
+/* Style des années */
 .year {
     background-color: #0A2239; /* Bleu foncé */
     color: white;
+    padding: 20px;
     font-size: 1.5em;
-    padding: 15px;
-    margin: 10px auto;
+    text-align: center;
+    width: calc(100% - 40px); /* Même largeur que la présentation */
+    max-width: 2000px;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    width: calc(100% - 40px); /* Ajuste la largeur */
-    max-width: 2000px; /* Même largeur max que la présentation */
-    text-align: center;
+    transition: background-color 0.3s;
 }
 
-/* Effet au survol */
 .year:hover {
-    background-color: #3A6EA5; /* Bleu plus clair */
-    transform: scale(1.02);
+    background-color: #3A6EA5; /* Bleu plus clair au survol */
 }
 
-/* Conteneur des projets (caché par défaut, même largeur que la présentation) */
+/* Conteneur des projets (affiché sous chaque année) */
 .projects {
-    background-color: #F0F4F8;
-    color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    width: calc(100% - 40px); /* Même largeur que la présentation */
-    max-width: 2000px; /* Largeur maximale */
+    display: none; /* Caché par défaut */
+    width: calc(100% - 40px);
+    max-width: 2000px;
     margin: 10px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: max-height 0.5s ease-out, opacity 0.3s;
 }
 
-/* Caché par défaut */
-.hidden {
-    display: none;
-}
-
-/* Conteneur global des projets */
+/* Espacement uniforme entre chaque projet */
 .project-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(100% - 40px); /* Même largeur que les blocs année */
-    max-width: 2000px;
-    margin: 20px auto;
+    gap: 10px; /* Ajoute un petit espace fixe entre les blocs */
+    width: 100%;
+    margin-top: 10px; /* Espacement au-dessus du projet */
 }
 
 /* Colonne de gauche */
 .project-left {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espacement entre les rectangles */
-    width: 50%; /* Prend la moitié gauche */
+    gap: 10px;
+    width: 50%;
 }
 
 /* Rectangle "Nom du projet" */
-.project-name {
-    background-color: #3A6EA5; /* Bleu moyen */
+.project-name,
+.project-objective {
+    background-color: #3A6EA5;
     color: white;
-    padding: 10px;
+    padding: 15px;
     font-size: 1.2em;
     text-align: center;
-    width: 100%; /* Prend toute la largeur de la colonne gauche */
-    height: 10vh; /* Hauteur 10% de la vue */
     border-radius: 5px;
+    height: 10vh; /* Hauteur fixe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Rectangle "Objectif(s)" */
 .project-objective {
-    background-color: #2C497F; /* Bleu plus foncé */
-    color: white;
-    padding: 10px;
-    font-size: 1.2em;
-    text-align: center;
-    width: 40%; /* Largeur réduite */
-    height: 40vh; /* Hauteur plus grande */
-    border-radius: 5px;
+    background-color: #2C497F;
+    height: 40vh;
+    width: 100%;
 }
 
-/* Colonne de droite (Résultats) */
+/* Rectangle "Résultat(s)" */
 .project-results {
-    background-color: #0A2239; /* Bleu foncé */
+    background-color: #0A2239;
     color: white;
-    padding: 10px;
+    padding: 15px;
     font-size: 1.2em;
     text-align: center;
-    width: 50%; /* Prend l'autre moitié */
-    height: 50vh; /* Hauteur plus grande */
+    width: 50%;
+    height: 50vh;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Évite le débordement des médias */
+    overflow: hidden;
 }
 
-/* Pour bien centrer les textes */
+/* Centrer le texte des rectangles */
 .project-name, .project-objective, .project-results {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: bold;
 }
 
-/* Ajout d'un effet au survol */
+/* Effet de survol */
 .project-name:hover, .project-objective:hover, .project-results:hover {
-    transform: scale(1.02); /* Légère augmentation au survol */
+    transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
 }
-
