@@ -81,13 +81,12 @@ header {
 .project-left {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px; /* Augmenter l'espacement entre les rectangles de gauche */
     width: 50%;
 }
 
 /* Rectangle "Nom du projet" */
-.project-name,
-.project-objective {
+.project-name {
     background-color: #3A6EA5;
     color: white;
     padding: 15px;
@@ -98,13 +97,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px; /* Ajoute une petite marge sous le "Nom du projet" */
 }
 
 /* Rectangle "Objectif(s)" */
 .project-objective {
     background-color: #2C497F;
-    height: 40vh;
+    height: 45vh; /* Augmentation de la longueur pour ajouter de l'espace */
     width: 100%;
+    margin-bottom: 10px; /* Ajoute une petite marge sous le "Objectif(s)" */
 }
 
 /* Rectangle "Résultat(s)" */
@@ -115,13 +116,14 @@ header {
     font-size: 1.2em;
     text-align: center;
     width: 50%;
-    height: 50vh;
+    height: 55vh; /* Augmentation de la hauteur pour un bon équilibre */
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
+
 
 /* Centrer le texte des rectangles */
 .project-name, .project-objective, .project-results {
