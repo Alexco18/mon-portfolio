@@ -1,4 +1,4 @@
-/* Réinitialisation des styles */
+/* 🔹 Réinitialisation des styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,16 +6,16 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* En-tête */
+/* 🔹 En-tête */
 header {
-    background-color: #0A2239; /* Bleu foncé style aéronautique */
+    background-color: #0A2239;
     color: white;
     text-align: center;
     padding: 40px 0;
     font-size: 2em;
 }
 
-/* 🔹 Rectangle bleu ciel pour la présentation */
+/* 🔹 Section de présentation */
 .presentation {
     background-color: #F0F4F8;
     color: #333;
@@ -36,10 +36,10 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: calc(100% - 40px); /* Alignement avec la présentation */
+    width: calc(100% - 40px);
     max-width: 2000px;
-    margin: 30px auto; /* Ajustement de la marge */
-    gap: 15px; /* Espacement uniforme */
+    margin: 30px auto;
+    gap: 20px; /* Espacement uniforme entre tous les boutons */
 }
 
 /* 🔹 Style des boutons */
@@ -53,7 +53,7 @@ header {
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    width: 48%; /* Ajustement pour bien tenir sur deux colonnes */
+    width: calc(50% - 10px); /* Ajustement pour bien tenir en deux colonnes */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -72,7 +72,7 @@ header {
     margin-top: 20px;
 }
 
-/* Style des années */
+/* 🔹 Style des années */
 .year {
     background-color: #0A2239;
     color: white;
@@ -98,26 +98,27 @@ header {
     margin: 10px auto;
 }
 
-/* 🔹 Espacement uniforme des projets */
+/* 🔹 Espacement uniforme entre chaque projet */
 .project-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px; /* Espacement identique */
+    gap: 20px;
     width: 100%;
-    margin-top: 15px; /* Espacement identique */
+    margin-top: 15px;
 }
 
-/* Colonne de gauche */
+/* 🔹 Colonne de gauche */
 .project-left {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacement uniforme */
+    gap: 15px;
     width: 50%;
 }
 
-/* 🔹 Style des blocs projets */
-.project-name, .project-objective {
+/* 🔹 Rectangle "Nom du projet" */
+.project-name,
+.project-objective {
     background-color: #3A6EA5;
     color: white;
     padding: 15px;
@@ -130,13 +131,14 @@ header {
     justify-content: center;
 }
 
-/* Objectifs */
+/* 🔹 Rectangle "Objectif(s)" */
 .project-objective {
     background-color: #2C497F;
     height: 40vh;
+    width: 100%;
 }
 
-/* Résultats */
+/* 🔹 Rectangle "Résultat(s)" */
 .project-results {
     background-color: #0A2239;
     color: white;
@@ -152,35 +154,65 @@ header {
     overflow: hidden;
 }
 
-/* Centrer le texte */
+/* 🔹 Centrer le texte des rectangles */
 .project-name, .project-objective, .project-results {
     font-weight: bold;
 }
 
-/* Effet au survol */
+/* 🔹 Effet de survol */
 .project-name:hover, .project-objective:hover, .project-results:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
 }
 
+/* 🔹 Pied de page */
+footer {
+    background-color: #2C497F;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* 🔹 Mise en page spécifique pour la page CV */
+.cv-content {
+    margin: 40px auto;
+    width: 80%;
+    text-align: left;
+    padding-left: 40px;
+}
+
+/* 🔹 Style pour les titres (h2) */
+.cv-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    color: #2C497F;
+}
+
+/* 🔹 Style pour le texte du CV */
+.cv-content p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
 /* 🔹 Bouton de téléchargement du CV */
-.cv-download {
-    display: block;
-    background-color: #4CAF50; /* Vert */
+.download-button {
+    background-color: #4A76A8;
     color: white;
     padding: 15px 30px;
     font-size: 1.2em;
-    text-align: center;
-    border-radius: 8px;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    margin: 20px auto;
-    width: fit-content;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
-/* Effet de survol */
-.cv-download:hover {
-    background-color: #388E3C;
-    transform: scale(1.05);
+.download-button:hover {
+    background-color: #2C497F;
 }
