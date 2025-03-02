@@ -12,6 +12,7 @@ header {
     color: white;
     text-align: center;
     padding: 25px 0;
+    font-size: 1.3em; /* Augmentation de la taille du texte en-tête */
 }
 
 header h1 {
@@ -272,6 +273,8 @@ footer a:hover {
     flex-direction: column;
     gap: 15px;
     width: 50%;
+    position: relative; /* Ajout pour le positionnement */
+    height: 400px; /* Hauteur égale au rectangle résultats */
 }
 
 /* 🔹 Rectangle "Nom du projet" */
@@ -297,7 +300,7 @@ footer a:hover {
     font-size: 1.2em;
     text-align: left;
     border-radius: 5px;
-    height: 300px; /* Hauteur fixe */
+    height: 220px; /* Réduit de 300px à 220px */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -352,9 +355,10 @@ footer a:hover {
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    margin-top: 15px;
     width: 100%;
     transition: background-color 0.3s, transform 0.2s;
+    position: absolute; /* Positionnement absolu */
+    bottom: 0; /* Placer au bas de l'élément parent */
 }
 
 .download-report:hover {
@@ -388,6 +392,16 @@ footer a:hover {
     
     .project-left, .project-results {
         width: 100%;
+    }
+    
+    .project-left {
+        height: auto; /* Annuler la hauteur fixe sur mobile */
+        position: static; /* Annuler le positionnement relatif sur mobile */
+    }
+    
+    .download-report {
+        position: static; /* Annuler le positionnement absolu sur mobile */
+        margin-top: 15px; /* Ajouter une marge comme avant */
     }
     
     .cv-content {
