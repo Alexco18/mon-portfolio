@@ -3,112 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes projets scolaires</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers ton fichier CSS -->
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- En-tête bleu foncé -->
+
+    <!-- 🔹 En-tête -->
     <header>
-        Mes projets scolaires
+        Mon Portfolio
     </header>
 
-    <!-- Contenu de la présentation -->
-    <div class="presentation">
-        <p>Bienvenue dans la section de mes projets scolaires. Ici, vous trouverez tous les projets réalisés durant mes études, classés par ordre chronologique ou par sujet.</p>
+    <!-- 🔹 Présentation -->
+    <section class="presentation">
+        <p>Bienvenue sur mon portfolio ! Vous trouverez ici mes différents projets classés par année.</p>
+    </section>
+
+    <!-- 🔹 Conteneur des boutons -->
+    <div class="buttons-wrapper">
+        <a href="cv.html" class="button">Voir mon CV</a>
+        <a href="contact.html" class="button">Me contacter</a>
     </div>
 
-    <!-- Conteneur des années -->
+    <!-- 🔹 Conteneur des années -->
     <div class="years-container">
-
-      <div class="year" data-target="projects-2024">2024 - 2025</div>
-<div id="projects-2024" class="projects">
-    <!-- Projet 1 -->
-    <div class="project-container">
-        <div class="project-left">
-            <div class="project-name">Nom du projet : 24 Heures de l'Innonvation à Bourges.</div>
-            <div class="project-objective">Objectif(s) : Développer une solution en 24 heures en équipe afin de répondre au sujet suivant :
-            Réfléchir à un dispositif permettant de fixer un propulseur à un drone militaire.</div>
-            
-        </div>
-        <div class="project-results">
-            Résultat(s) : <br>
-            <img src="chemin-de-l-image.jpg" alt="Image du projet" width="80%">
-        </div>
+        <div class="year year-2024" onclick="toggleProjects('projects-2024')">2024</div>
+        <div class="year year-2023" onclick="toggleProjects('projects-2023')">2023</div>
+        <div class="year year-2022" onclick="toggleProjects('projects-2022')">2022</div>
+        <div class="year year-2021" onclick="toggleProjects('projects-2021')">2021</div>
     </div>
 
-    <!-- Séparateur entre les projets -->
-    <div class="separator"></div>
-
-    <!-- Projet 2 -->
-    <div class="project-container">
-        <div class="project-left">
-            <div class="project-name">Nom du projet : Système de Navigation</div>
-            <div class="project-objective">Objectif(s) : Développer un GPS intelligent</div>
-        </div>
-        <div class="project-results">
-            Résultat(s) : <br>
-            <img src="chemin-de-l-image2.jpg" alt="Image du projet" width="80%">
-        </div>
-    </div>
-</div>
-
-        <!-- Année 2023 - 2024 en bleu -->
-        <div class="year year-2023" data-target="projects-2023">2023 - 2024</div>
-        <div id="projects-2023" class="projects">
-            <div class="project-container">
-                <div class="project-left">
-                    <div class="project-name">Nom du projet : Projet Proof Of Concecpt (POC) - LCTX Aéroferme.</div>
-                    <div class="project-objective">Objectif(s) : Créer une ferme urbaine adaptée à la Rotonde du Palais Rameaux à Lille.</div>
-                </div>
-                <div class="project-results">
-                    Résultat(s) : <br>
-                    <img src="chemin-de-l-image2.jpg" alt="Image du projet" width="80%">
+    <!-- 🔹 Projets 2024 -->
+    <div id="projects-2024" class="projects">
+        <div class="project-container">
+            <div class="project-left">
+                <div class="project-name">Nom du projet</div>
+                <div class="project-objective">
+                    <p>Objectif(s) du projet</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Année 2022 - 2023 en marron -->
-        <div class="year year-2022" data-target="projects-2022">2022 - 2023</div>
-        <div id="projects-2022" class="projects">
-            <div class="project-container">
-                <div class="project-left">
-                    <div class="project-name">Nom du projet : Projet PISTE - Récupérer l'énergie du corps humain pour la redistribuer.</div>
-                    <div class="project-objective">Objectif(s) : Etude de faisabilité sur la création d'un siège capable de récupérer l'énergie thermique du corps humain et de la convertir en électricité.</div>
-                </div>
-                <div class="project-results">
-                    Résultat(s) : <br>
-                    <img src="chemin-de-l-image3.jpg" alt="Image du projet" width="80%">
-                </div>
+            <div class="project-results">
+                <p>Résultat(s) obtenu(s)</p>
             </div>
         </div>
-
     </div>
 
-    <!-- Pied de page -->
+    <!-- 🔹 Projets 2023 -->
+    <div id="projects-2023" class="projects">
+        <div class="project-container">
+            <div class="project-left">
+                <div class="project-name">Nom du projet</div>
+                <div class="project-objective">
+                    <p>Objectif(s) du projet</p>
+                </div>
+            </div>
+            <div class="project-results">
+                <p>Résultat(s) obtenu(s)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔹 Projets 2022 -->
+    <div id="projects-2022" class="projects">
+        <div class="project-container">
+            <div class="project-left">
+                <div class="project-name">Nom du projet</div>
+                <div class="project-objective">
+                    <p>Objectif(s) du projet</p>
+                </div>
+            </div>
+            <div class="project-results">
+                <p>Résultat(s) obtenu(s)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔹 Projets 2021 -->
+    <div id="projects-2021" class="projects">
+        <div class="project-container">
+            <div class="project-left">
+                <div class="project-name">Nom du projet</div>
+                <div class="project-objective">
+                    <p>Objectif(s) du projet</p>
+                </div>
+            </div>
+            <div class="project-results">
+                <p>Résultat(s) obtenu(s)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔹 Pied de page -->
     <footer>
-        <p>&copy; 2025 CORRE Alexandre - Tous droits réservés</p>
-        <p>Dernière mise à jour : 01/03/2025</p>
+        © 2024 Mon Portfolio - Tous droits réservés.
     </footer>
 
-    <!-- Script JS pour afficher/cacher les projets -->
-    <script defer>
-        document.addEventListener("DOMContentLoaded", function() {
-            const years = document.querySelectorAll(".year");
-
-            years.forEach(year => {
-                year.addEventListener("click", function() {
-                    const target = this.getAttribute("data-target");
-                    const projects = document.getElementById(target);
-
-                    // Vérifie si la section est déjà visible
-                    if (projects.style.display === "none" || projects.style.display === "") {
-                        projects.style.display = "block"; // Affiche la section
-                    } else {
-                        projects.style.display = "none"; // Cache la section
-                    }
-                });
+    <script>
+        function toggleProjects(id) {
+            let projects = document.querySelectorAll('.projects');
+            projects.forEach(project => {
+                if (project.id === id) {
+                    project.style.display = (project.style.display === 'block') ? 'none' : 'block';
+                } else {
+                    project.style.display = 'none';
+                }
             });
-        });
+        }
     </script>
 
 </body>
