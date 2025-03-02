@@ -1,4 +1,4 @@
-Réinitialisation des styles */
+/* 🔹 Réinitialisation des styles */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ header {
 }
 
 /* 🔹 Section de présentation */
-.presentation {
+presentation {
     background-color: #F0F4F8;
     color: #333;
     text-align: justify;
@@ -137,10 +137,10 @@ header {
     height: 40vh;
     width: 100%;
     display: flex;
-    flex-direction: column;  /* Ajoute cette ligne */
-    justify-content: flex-start;  /* Alignement vertical en haut */
-    align-items: flex-start;  /* Alignement horizontal à gauche */
-    padding: 15px;  /* Ajoute un peu de padding pour éviter que le texte ne touche les bords */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px;
 }
 
 /* 🔹 Rectangle "Résultat(s)" */
@@ -149,17 +149,15 @@ header {
     color: white;
     padding: 15px;
     font-size: 1.2em;
-    text-align: left;  /* Aligne le texte à gauche */
+    text-align: left;
     width: 50%;
-    height: 40vh;  /* Réajuste la hauteur pour la rendre égale aux autres rectangles */
+    height: 40vh;
     border-radius: 5px;
     display: flex;
-    flex-direction: column;  /* Ajoute cette ligne */
-    justify-content: flex-start;  /* Alignement vertical en haut */
-    align-items: flex-start;  /* Alignement horizontal à gauche */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
-
-
 
 /* 🔹 Centrer le texte des rectangles */
 .project-name, .project-objective, .project-results {
@@ -226,7 +224,7 @@ footer {
 
 /* 🔹 Rectangle sous l'en-tête */
 .top-banner {
-    background-color: #1C3D5A; /* Bleu foncé, mais moins foncé que l'en-tête */
+    background-color: #1C3D5A;
     color: white;
     text-align: center;
     padding: 20px;
@@ -242,9 +240,9 @@ footer {
 /* Séparateur entre les projets */
 .separator {
     width: 100%;
-    height: 2px; /* Épaisseur de la ligne */
-    background-color: #3A6EA5; /* Couleur bleu clair */
-    margin: 20px 0; /* Espacement entre les projets */
+    height: 2px;
+    background-color: #3A6EA5;
+    margin: 20px 0;
     border-radius: 5px;
 }
 
@@ -255,7 +253,7 @@ footer {
     align-items: center;
     gap: 10px;
     margin-top: 20px;
-    width: 100%; /* S'assure que tout est bien centré */
+    width: 100%;
 }
 
 /* 🔹 Style général des années */
@@ -272,13 +270,12 @@ footer {
 }
 
 /* 🔹 Couleur spécifique par année */
-.year-2024 { background-color: #2E8B57; } /* Vert foncé */
-.year-2023 { background-color: #3A6EA5; } /* Bleu */
-.year-2022 { background-color: #D2691E; } /* Marron */
-.year-2021 { background-color: #8B0000; } /* Rouge foncé */
+.year-2024 { background-color: #2E8B57; }
+.year-2023 { background-color: #3A6EA5; }
+.year-2022 { background-color: #D2691E; }
+.year-2021 { background-color: #8B0000; }
 
 /* 🔹 Effet de survol */
 .year:hover {
     filter: brightness(1.2);
 }
-
