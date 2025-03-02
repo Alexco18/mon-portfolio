@@ -327,20 +327,21 @@ footer a:hover {
     overflow-y: auto; /* Pour permettre le défilement si nécessaire */
 }
 
-/* Style pour les images côte à côte dans les résultats */
+/* Style modifié pour le conteneur d'image - pour une seule image */
 .image-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 15px;
-    gap: 10px;
+    height: calc(100% - 40px); /* Prend tout l'espace disponible moins la marge et le texte */
 }
 
+/* Style modifié pour l'image unique */
 .image-container img {
-    width: calc(50% - 5px); /* 50% moins la moitié de l'espacement */
-    height: 150px; /* Hauteur fixe pour toutes les images */
-    object-fit: cover; /* Pour que l'image couvre bien l'espace disponible */
+    width: 100%; /* Prend toute la largeur */
+    max-height: 100%; /* Prend toute la hauteur disponible */
+    object-fit: contain; /* Garde les proportions de l'image */
     border: 2px solid white;
     border-radius: 5px;
 }
@@ -413,7 +414,7 @@ footer a:hover {
         flex-direction: column;
     }
     
-    .image-container img {
-        height: 120px; /* Légèrement plus petit sur mobile */
+    .image-container {
+        height: 250px; /* Hauteur fixe pour mobile */
     }
 }
