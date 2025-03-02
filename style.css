@@ -313,7 +313,7 @@ footer a:hover {
     font-size: 1.2em;
     text-align: left;
     width: 50%;
-    min-height: 40vh;
+    min-height: 55vh; /* Augmenté pour s'aligner avec la hauteur combinée de project-name + project-objective + gap */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -322,13 +322,30 @@ footer a:hover {
     font-weight: bold;
 }
 
+/* Améliorations pour les images dans les résultats */
 .project-results img {
     margin-top: 15px;
     border: 2px solid white;
     border-radius: 5px;
     max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Assure que l'image s'adapte sans déformation */
+    max-height: 70%; /* Limite la hauteur de l'image pour qu'elle ne dépasse pas trop */
 }
 
+/* Amélioration de la structure du projet pour un meilleur alignement */
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alignement en haut */
+    gap: 20px;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 /* Séparateur entre les projets */
 .separator {
     width: 100%;
