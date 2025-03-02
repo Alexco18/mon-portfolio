@@ -93,7 +93,7 @@ header {
     text-align: center;
     border-radius: 5px;
     height: 10vh; /* Hauteur fixe */
-    min-height: 80px; /* Évite que ça devienne trop petit */
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,6 +102,7 @@ header {
 /* 🔹 Rectangle "Objectif(s)" */
 .project-objective {
     background-color: #2C497F;
+    color: white;
     height: 40vh; /* Hauteur fixe */
     min-height: 300px;
     width: 100%;
@@ -110,6 +111,7 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 15px;
+    border-radius: 10px; /* ✅ Bordures arrondies */
 }
 
 /* 🔹 Rectangle "Résultat(s)" */
@@ -119,7 +121,7 @@ header {
     padding: 15px;
     font-size: 1.2em;
     text-align: left;
-    width: 50%;
+    width: 55%; /* ✅ Augmenté pour bien toucher le bas du rectangle "Objectifs" */
     height: calc(10vh + 40vh); /* Même hauteur que les deux blocs de gauche combinés */
     min-height: 380px;
     border-radius: 5px;
