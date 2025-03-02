@@ -206,7 +206,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* 🔹 Conteneur des années et styles des projets (conservés de votre code original) */
+/* 🔹 Conteneur des années et styles des projets */
 .years-container {
     display: flex;
     flex-direction: column;
@@ -256,7 +256,7 @@ footer a:hover {
 .project-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Changé de center à flex-start pour un meilleur alignement */
+    align-items: flex-start;
     gap: 20px;
     width: 100%;
     margin-top: 15px;
@@ -282,7 +282,7 @@ footer a:hover {
     font-size: 1.2em;
     text-align: center;
     border-radius: 5px;
-    min-height: 10vh;
+    height: 80px; /* Hauteur fixe */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,12 +297,13 @@ footer a:hover {
     font-size: 1.2em;
     text-align: left;
     border-radius: 5px;
-    min-height: 40vh;
+    height: 300px; /* Hauteur fixe */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     font-weight: bold;
+    overflow-y: auto; /* Pour permettre le défilement si le contenu est trop long */
 }
 
 /* 🔹 Rectangle "Résultat(s)" */
@@ -313,39 +314,54 @@ footer a:hover {
     font-size: 1.2em;
     text-align: left;
     width: 50%;
-    min-height: 55vh; /* Augmenté pour s'aligner avec la hauteur combinée de project-name + project-objective + gap */
+    height: 400px; /* Hauteur fixe */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     font-weight: bold;
+    overflow-y: auto; /* Pour permettre le défilement si nécessaire */
 }
 
-/* Améliorations pour les images dans les résultats */
-.project-results img {
-    margin-top: 15px;
-    border: 2px solid white;
-    border-radius: 5px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain; /* Assure que l'image s'adapte sans déformation */
-    max-height: 70%; /* Limite la hauteur de l'image pour qu'elle ne dépasse pas trop */
-}
-
-/* Amélioration de la structure du projet pour un meilleur alignement */
-.project-container {
+/* Style pour les images côte à côte dans les résultats */
+.image-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Alignement en haut */
-    gap: 20px;
+    align-items: center;
     width: 100%;
     margin-top: 15px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    gap: 10px;
 }
+
+.image-container img {
+    width: calc(50% - 5px); /* 50% moins la moitié de l'espacement */
+    height: 150px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Pour que l'image couvre bien l'espace disponible */
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Style pour le bouton de téléchargement du rapport */
+.download-report {
+    background-color: #4A76A8;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.download-report:hover {
+    background-color: #2C497F;
+    transform: scale(1.03);
+}
+
 /* Séparateur entre les projets */
 .separator {
     width: 100%;
@@ -381,5 +397,9 @@ footer a:hover {
     
     .skills-container {
         flex-direction: column;
+    }
+    
+    .image-container img {
+        height: 120px; /* Légèrement plus petit sur mobile */
     }
 }
