@@ -1,3 +1,4 @@
+Réinitialisation des styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: 'Arial', sans-serif;
 }
 
+/* 🔹 En-tête */
 header {
     background-color: #0A2239;
     color: white;
@@ -13,6 +15,7 @@ header {
     font-size: 2em;
 }
 
+/* 🔹 Section de présentation */
 .presentation {
     background-color: #F0F4F8;
     color: #333;
@@ -28,6 +31,39 @@ header {
     padding-left: 60px;
 }
 
+/* 🔹 Conteneur des boutons */
+.buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    margin: 30px auto;
+    gap: 20px; /* Espacement uniforme entre tous les boutons */
+}
+
+/* 🔹 Style des boutons */
+.button {
+    background-color: #4A76A8;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: calc(50% - 10px); /* Ajustement pour bien tenir en deux colonnes */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet de survol */
+.button:hover {
+    background-color: #2C497F;
+    transform: scale(1.05);
+}
+
+/* 🔹 Conteneur des années */
 .years-container {
     display: flex;
     flex-direction: column;
@@ -36,6 +72,7 @@ header {
     margin-top: 20px;
 }
 
+/* 🔹 Style des années */
 .year {
     background-color: #0A2239;
     color: white;
@@ -53,6 +90,7 @@ header {
     background-color: #3A6EA5;
 }
 
+/* 🔹 Conteneur des projets */
 .projects {
     display: none;
     width: calc(100% - 40px);
@@ -60,15 +98,17 @@ header {
     margin: 10px auto;
 }
 
+/* 🔹 Espacement uniforme entre chaque projet */
 .project-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
     width: 100%;
     margin-top: 15px;
 }
 
+/* 🔹 Colonne de gauche */
 .project-left {
     display: flex;
     flex-direction: column;
@@ -76,47 +116,63 @@ header {
     width: 50%;
 }
 
-.project-name {
+/* 🔹 Rectangle "Nom du projet" */
+.project-name,
+.project-objective {
     background-color: #3A6EA5;
     color: white;
     padding: 15px;
     font-size: 1.2em;
     text-align: center;
     border-radius: 5px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* 🔹 Rectangle "Objectif(s)" */
 .project-objective {
     background-color: #2C497F;
-    color: white;
-    padding: 15px;
-    font-size: 1.2em;
-    text-align: left;
-    border-radius: 5px;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;  /* Ajoute cette ligne */
+    justify-content: flex-start;  /* Alignement vertical en haut */
+    align-items: flex-start;  /* Alignement horizontal à gauche */
+    padding: 15px;  /* Ajoute un peu de padding pour éviter que le texte ne touche les bords */
 }
 
+/* 🔹 Rectangle "Résultat(s)" */
 .project-results {
     background-color: #0A2239;
     color: white;
     padding: 15px;
     font-size: 1.2em;
-    text-align: left;
+    text-align: left;  /* Aligne le texte à gauche */
     width: 50%;
+    height: 40vh;  /* Réajuste la hauteur pour la rendre égale aux autres rectangles */
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;  /* Ajoute cette ligne */
+    justify-content: flex-start;  /* Alignement vertical en haut */
+    align-items: flex-start;  /* Alignement horizontal à gauche */
 }
 
+
+
+/* 🔹 Centrer le texte des rectangles */
+.project-name, .project-objective, .project-results {
+    font-weight: bold;
+}
+
+/* 🔹 Effet de survol */
 .project-name:hover, .project-objective:hover, .project-results:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
 }
 
-.separator {
-    width: 100%;
-    height: 2px;
-    background-color: #3A6EA5;
-    margin: 20px 0;
-    border-radius: 5px;
-}
-
+/* 🔹 Pied de page */
 footer {
     background-color: #2C497F;
     color: white;
@@ -129,8 +185,48 @@ footer {
     width: 100%;
 }
 
+/* 🔹 Mise en page spécifique pour la page CV */
+.cv-content {
+    margin: 40px auto;
+    width: 80%;
+    text-align: left;
+    padding-left: 40px;
+}
+
+/* 🔹 Style pour les titres (h2) */
+.cv-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    color: #2C497F;
+}
+
+/* 🔹 Style pour le texte du CV */
+.cv-content p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* 🔹 Bouton de téléchargement du CV */
+.download-button {
+    background-color: #4A76A8;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #2C497F;
+}
+
+/* 🔹 Rectangle sous l'en-tête */
 .top-banner {
-    background-color: #1C3D5A;
+    background-color: #1C3D5A; /* Bleu foncé, mais moins foncé que l'en-tête */
     color: white;
     text-align: center;
     padding: 20px;
@@ -142,3 +238,47 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Séparateur entre les projets */
+.separator {
+    width: 100%;
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: #3A6EA5; /* Couleur bleu clair */
+    margin: 20px 0; /* Espacement entre les projets */
+    border-radius: 5px;
+}
+
+/* Assure que les années restent bien positionnées */
+.years-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%; /* S'assure que tout est bien centré */
+}
+
+/* 🔹 Style général des années */
+.year {
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 🔹 Couleur spécifique par année */
+.year-2024 { background-color: #2E8B57; } /* Vert foncé */
+.year-2023 { background-color: #3A6EA5; } /* Bleu */
+.year-2022 { background-color: #D2691E; } /* Marron */
+.year-2021 { background-color: #8B0000; } /* Rouge foncé */
+
+/* 🔹 Effet de survol */
+.year:hover {
+    filter: brightness(1.2);
+}
+
