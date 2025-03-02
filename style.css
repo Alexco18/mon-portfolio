@@ -292,7 +292,7 @@ footer a:hover {
     font-weight: bold;
 }
 
-/* 🔹 Rectangle "Objectif(s)" */
+/* 🔹 Rectangle "Objectif(s)" - Augmenter la hauteur */
 .project-objective {
     background-color: #2C497F;
     color: white;
@@ -300,13 +300,13 @@ footer a:hover {
     font-size: 1.2em;
     text-align: left;
     border-radius: 5px;
-    height: 220px; /* Réduit de 300px à 220px */
+    height: 250px; /* Augmenté de 220px à 250px */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     font-weight: bold;
-    overflow-y: auto; /* Pour permettre le défilement si le contenu est trop long */
+    overflow-y: auto;
 }
 
 /* 🔹 Rectangle "Résultat(s)" */
