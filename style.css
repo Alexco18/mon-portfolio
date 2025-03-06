@@ -75,19 +75,20 @@ nav a:hover {
 
 /* 🔹 Style des boutons */
 .button {
-    background-color: #4A76A8; /* Couleur par défaut, sera remplacée par les classes spécifiques */
+        background-color: #4A76A8; /* Couleur par défaut, sera remplacée par les classes spécifiques */
     color: white;
-    padding: 20px 35px;
+        padding: 20px 35px;
     font-size: 1.4em;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    width: calc(50% - 10px);
+        width: calc(50% - 10px);
     transition: background-color 0.3s ease, transform 0.2s ease;
-    font-weight: bold;
-}
+    font-weight: bold; /* Ajouté pour plus de visibilité */
+   }
+
 
 /* Couleurs spécifiques pour chaque bouton du portfolio */
 .button-cv { background-color: #2E8B57; } /* Vert foncé */
@@ -103,6 +104,7 @@ nav a:hover {
 
 /* Effet général de survol avec scale */
 .button:hover {
+    
     transform: scale(1.05);
 }
 
@@ -407,48 +409,48 @@ footer a:hover {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .button {
         width: 100%;
         padding: 18px 25px; /* Légèrement réduit pour mobile mais toujours grand */
         font-size: 1.3em; /* Légèrement réduit pour mobile */
     }
-    
+
     .project-container {
         flex-direction: column;
     }
-    
+
     .project-left, .project-results {
         width: 100%;
     }
-    
+
     .project-left {
         height: auto; /* Annuler la hauteur fixe sur mobile */
         position: static; /* Annuler le positionnement relatif sur mobile */
     }
-    
+
     .download-report {
         position: static; /* Annuler le positionnement absolu sur mobile */
         margin-top: 15px; /* Ajouter une marge comme avant */
     }
-    
+
     .cv-content {
         width: 95%;
         padding: 15px;
     }
-    
+
     .skills-container {
         flex-direction: column;
     }
-    
+
     .image-container {
         height: 250px; /* Hauteur fixe pour mobile */
     }
-    
+
     .buttons {
         flex-direction: column; /* Revenir à l'empilement vertical sur mobile */
     }
-    
+
     .download-button {
         width: 90%; /* Reprendre la largeur en pourcentage sur mobile */
     }
