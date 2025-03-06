@@ -77,8 +77,8 @@ nav a:hover {
 .button {
     background-color: #4A76A8;
     color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 20px 35px; /* Augmenté de 15px 30px à 20px 35px */
+    font-size: 1.4em; /* Augmenté de 1.2em à 1.4em */
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
@@ -86,6 +86,7 @@ nav a:hover {
     display: inline-block;
     width: calc(50% - 10px); /* Ajustement pour bien tenir en deux colonnes */
     transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold; /* Ajouté pour plus de visibilité */
 }
 
 /* Effet de survol */
@@ -171,8 +172,10 @@ nav a:hover {
 /* 🔹 Conteneur de boutons pour la page CV */
 .buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrer les boutons horizontalement */
+    flex-direction: row; /* Changé de column à row */
+    justify-content: center; /* Centre les boutons horizontalement */
+    flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
+    align-items: center;
     gap: 15px;
     margin-top: 30px;
 }
@@ -181,15 +184,14 @@ nav a:hover {
 .download-button {
     background-color: #4A76A8;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 20px; /* Légèrement réduit pour mieux tenir côte à côte */
     font-size: 1.2em;
     border-radius: 5px;
     text-decoration: none;
-    display: inline-block;
     transition: background-color 0.3s, transform 0.2s;
     text-align: center;
-    width: 80%; /* Définir une largeur pour tous les boutons */
-    max-width: 500px; /* Limiter la largeur maximale */
+    width: auto; /* Changé de 80% à auto pour s'adapter au contenu */
+    max-width: none; /* Retiré la largeur maximale */
 }
 
 .download-button:hover {
@@ -397,6 +399,8 @@ footer a:hover {
     
     .button {
         width: 100%;
+        padding: 18px 25px; /* Légèrement réduit pour mobile mais toujours grand */
+        font-size: 1.3em; /* Légèrement réduit pour mobile */
     }
     
     .project-container {
@@ -431,10 +435,10 @@ footer a:hover {
     }
     
     .buttons {
-        width: 100%;
+        flex-direction: column; /* Revenir à l'empilement vertical sur mobile */
     }
     
     .download-button {
-        width: 90%;
+        width: 90%; /* Reprendre la largeur en pourcentage sur mobile */
     }
 }
