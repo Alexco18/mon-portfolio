@@ -12,7 +12,7 @@ header {
     color: white;
     text-align: center;
     padding: 25px 0;
-    font-size: 1.3em; /* Augmentation de la taille du texte en-tête */
+    font-size: 1.8em; /* Augmentation de la taille de l'en-tête */
 }
 
 header h1 {
@@ -118,6 +118,7 @@ nav a:hover {
     background-color: #F0F4F8;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #3A6EA5; /* Ajout de la bordure bleue */
 }
 
 /* 🔹 Style pour les titres (h2) */
@@ -167,6 +168,15 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
+/* 🔹 Conteneur de boutons pour la page CV */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer les boutons horizontalement */
+    gap: 15px;
+    margin-top: 30px;
+}
+
 /* 🔹 Bouton de téléchargement du CV */
 .download-button {
     background-color: #4A76A8;
@@ -176,8 +186,10 @@ nav a:hover {
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    margin-top: 30px;
     transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    width: 80%; /* Définir une largeur pour tous les boutons */
+    max-width: 500px; /* Limiter la largeur maximale */
 }
 
 .download-button:hover {
@@ -416,5 +428,13 @@ footer a:hover {
     
     .image-container {
         height: 250px; /* Hauteur fixe pour mobile */
+    }
+    
+    .buttons {
+        width: 100%;
+    }
+    
+    .download-button {
+        width: 90%;
     }
 }
