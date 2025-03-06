@@ -1,130 +1,419 @@
-/* Style général */
-body {
-    font-family: Arial, sans-serif;
+/* 🔹 Réinitialisation des styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* En-tête */
+/* 🔹 En-tête avec navigation */
 header {
-    background-color: #003366;
+    background-color: #0A2239;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    font-size: 24px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 25px 0;
+    font-size: 1.8em; /* Augmentation de la taille de l'en-tête */
 }
 
-/* Section de présentation */
-.presentation {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3A6EA5;
+}
+
+/* 🔹 Section de présentation */
+.presentation {
+    background-color: #F0F4F8;
+    color: #333;
+    text-align: justify;
+    padding: 40px 20px;
+    font-size: 1.2em;
+    width: calc(100% - 40px);
+    margin: 40px auto;
+    border-radius: 10px;
+    max-width: 2000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #3A6EA5;
+    padding-left: 60px;
 }
 
 .presentation p {
     margin-bottom: 15px;
-    text-align: justify;
+    line-height: 1.6;
 }
 
-/* Conteneur des années */
-.years-container {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 15px;
-}
-
-/* Conteneur année + logo */
-.year-container {
+/* 🔹 Conteneur des boutons */
+.buttons-wrapper {
     display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    margin: 30px auto;
+    gap: 20px; /* Espacement uniforme entre tous les boutons */
 }
 
-/* Style du logo d'année */
-.year-logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-    object-fit: contain;
-    border-radius: 50%;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Style des années */
-.year {
-    background-color: #003366;
+/* 🔹 Style des boutons */
+.button {
+    background-color: #4A76A8; /* Couleur par défaut, sera remplacée par les classes spécifiques */
     color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
+    padding: 20px 35px;
+    font-size: 1.4em;
+    border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 10px;
-    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: calc(50% - 10px);
+    transition: background-color 0.3s ease, transform 0.2s ease;
     font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Couleurs spécifiques pour chaque bouton du portfolio */
+.button-cv { background-color: #2E8B57; } /* Vert foncé */
+.button-portfolio { background-color: #3A6EA5; } /* Bleu */
+.button-projets { background-color: #D2691E; } /* Marron */
+.button-contact { background-color: #8B0000; } /* Rouge foncé */
+
+/* Effet de survol pour chaque bouton avec un éclaircissement */
+.button-cv:hover { background-color: #3aab6b; }
+.button-portfolio:hover { background-color: #4a8ed0; }
+.button-projets:hover { background-color: #e07f3a; }
+.button-contact:hover { background-color: #b30000; }
+
+/* Effet général de survol avec scale */
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Rectangle sous l'en-tête */
+.top-banner {
+    background-color: #1C3D5A; /* Bleu foncé, mais moins foncé que l'en-tête */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Mise en page spécifique pour la page CV */
+.cv-content {
+    margin: 40px auto 80px; /* Ajout d'une marge en bas pour éviter que le contenu ne soit caché par le footer */
+    width: 80%;
+    text-align: left;
+    padding: 20px 40px;
+    background-color: #F0F4F8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #3A6EA5; /* Ajout de la bordure bleue */
+}
+
+/* 🔹 Style pour les titres (h2) */
+.cv-content h2 {
+    margin: 20px 0 10px;
+    font-size: 1.6em;
+    color: #2C497F;
+    border-bottom: 2px solid #3A6EA5;
+    padding-bottom: 5px;
+}
+
+/* 🔹 Style pour le texte du CV */
+.cv-content p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Styles pour les compétences */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.skill-category {
+    flex: 1;
+    min-width: 200px;
+    background-color: #e6eef5;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.skill-category h3 {
+    color: #3A6EA5;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.skill-category ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.skill-category li {
+    margin-bottom: 5px;
+}
+
+/* 🔹 Conteneur de boutons pour la page CV */
+.buttons {
+    display: flex;
+    flex-direction: row; /* Changé de column à row */
+    justify-content: center; /* Centre les boutons horizontalement */
+    flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* 🔹 Bouton de téléchargement du CV */
+.download-button {
+    background-color: #4A76A8;
+    color: white;
+    padding: 15px 20px; /* Légèrement réduit pour mieux tenir côte à côte */
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    width: auto; /* Changé de 80% à auto pour s'adapter au contenu */
+    max-width: none; /* Retiré la largeur maximale */
+}
+
+.download-button:hover {
+    background-color: #2C497F;
+    transform: scale(1.05);
+}
+
+/* 🔹 Pied de page */
+footer {
+    background-color: #2C497F;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #a8c7e9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* 🔹 Conteneur des années et styles des projets */
+.years-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 80px; /* Espace pour le footer */
+}
+
+.year {
+    background-color: #0A2239;
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .year:hover {
-    background-color: #00264d;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    background-color: #3A6EA5;
 }
 
-/* Couleurs spécifiques pour chaque année */
-.year-2023 {
-    background-color: #336699;
+/* 🔹 Couleur spécifique par année */
+.year-2024 { background-color: #2E8B57; } /* Vert foncé */
+.year-2023 { background-color: #3A6EA5; } /* Bleu */
+.year-2022 { background-color: #D2691E; } /* Marron */
+.year-2021 { background-color: #8B0000; } /* Rouge foncé */
+
+/* 🔹 Effet de survol */
+.year:hover {
+    filter: brightness(1.2);
 }
 
-.year-2022 {
-    background-color: #996633;
-}
-
-.year-2021 {
-    background-color: #669933;
-}
-
-.year-2020 {
-    background-color: #993366;
-}
-
-/* Style des projets */
+/* 🔹 Conteneur des projets */
 .projects {
     display: none;
-    margin-bottom: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    width: calc(100% - 40px);
+    max-width: 2000px;
+    margin: 10px auto;
 }
 
-/* Conteneur de projet */
+/* 🔹 Espacement uniforme entre chaque projet */
 .project-container {
     display: flex;
-    background-color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 🔹 Colonne de gauche */
+.project-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    position: relative; /* Ajout pour le positionnement */
+    height: 400px; /* Hauteur égale au rectangle résultats */
+}
+
+/* 🔹 Rectangle "Nom du projet" */
+.project-name {
+    background-color: #3A6EA5;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: center;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 80px; /* Hauteur fixe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
-.project-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* 🔹 Rectangle "Objectif(s)" - Augmenter la hauteur */
+.project-objective {
+    background-color: #2C497F;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: left;
+    border-radius: 5px;
+    height: 250px; /* Augmenté de 220px à 250px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    overflow-y: auto;
 }
 
+/* 🔹 Rectangle "Résultat(s)" */
+.project-results {
+    background-color: #0A2239;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: left;
+    width: 50%;
+    height: 400px; /* Hauteur fixe */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+    overflow-y: auto; /* Pour permettre le défilement si nécessaire */
+}
+
+/* Style modifié pour le conteneur d'image - pour une seule image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+    height: calc(100% - 40px); /* Prend tout l'espace disponible moins la marge et le texte */
+}
+
+/* Style modifié pour l'image unique */
+.image-container img {
+    width: 100%; /* Prend toute la largeur */
+    max-height: 100%; /* Prend toute la hauteur disponible */
+    object-fit: contain; /* Garde les proportions de l'image */
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* Style pour le bouton de téléchargement du rapport */
+.download-report {
+    background-color: #4A76A8;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+    position: absolute; /* Positionnement absolu */
+    bottom: 0; /* Placer au bas de l'élément parent */
+}
+
+.download-report:hover {
+    background-color: #2C497F;
+    transform: scale(1.03);
+}
+
+/* Séparateur entre les projets */
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #3A6EA5;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+/* Responsive design pour les mobiles */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .button {
+        width: 100%;
+        padding: 18px 25px; /* Légèrement réduit pour mobile mais toujours grand */
+        font-size: 1.3em; /* Légèrement réduit pour mobile */
+    }
+    
     .project-container {
         flex-direction: column;
     }
@@ -132,222 +421,35 @@ header {
     .project-left, .project-results {
         width: 100%;
     }
-}
-
-/* Partie gauche du projet */
-.project-left {
-    flex: 2;
-    padding: 20px;
-}
-
-/* Nom du projet */
-.project-name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #003366;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-}
-
-/* Objectif du projet */
-.project-objective {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.project-objective div {
-    margin-bottom: 10px;
-}
-
-/* Bouton de téléchargement */
-.download-report {
-    display: inline-block;
-    background-color: #003366;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 15px;
-    transition: all 0.3s;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.download-report:hover {
-    background-color: #00264d;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-/* Résultats du projet */
-.project-results {
-    flex: 1;
-    padding: 20px;
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Conteneur d'image */
-.image-container {
-    margin-top: 15px;
-    text-align: center;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.image-container img:hover {
-    transform: scale(1.03);
-}
-
-/* Séparateur entre les projets */
-.separator {
-    height: 1px;
-    background-color: #e0e0e0;
-    margin: 30px 0;
-}
-
-/* Pied de page */
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-    font-size: 14px;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-/* Style pour les vidéos */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Ratio 16:9 */
-    height: 0;
-    overflow: hidden;
-    margin-top: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 5px;
-}
-
-/* Style pour le texte justifié */
-[style*="text-align: justify"] {
-    text-align: justify;
-}
-
-/* Style pour les liens */
-a {
-    color: #003366;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-/* Style pour les soulignements */
-u {
-    text-decoration-color: rgba(0, 51, 102, 0.5);
-    text-underline-offset: 2px;
-}
-
-/* Styles pour responsive design */
-@media (max-width: 992px) {
-    .presentation, .years-container {
-        max-width: 95%;
-    }
-}
-
-@media (max-width: 576px) {
-    .project-name {
-        font-size: 18px;
-    }
     
-    .year {
-        padding: 10px 15px;
-        font-size: 14px;
+    .project-left {
+        height: auto; /* Annuler la hauteur fixe sur mobile */
+        position: static; /* Annuler le positionnement relatif sur mobile */
     }
     
     .download-report {
-        width: 100%;
-        text-align: center;
+        position: static; /* Annuler le positionnement absolu sur mobile */
+        margin-top: 15px; /* Ajouter une marge comme avant */
     }
     
-    .year-logo {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
+    .cv-content {
+        width: 95%;
+        padding: 15px;
     }
-}
-
-/* Animation d'apparition pour les projets */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.projects[style*="display: block"] {
-    animation: fadeIn 0.5s ease forwards;
-}
-
-/* Style pour des éléments spécifiques */
-.project-objective strong {
-    color: #003366;
-}
-
-.project-objective ul {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-.project-objective li {
-    margin-bottom: 5px;
-}
-
-/* Modifications pour faciliter la lecture */
-.project-objective {
-    font-size: 15px;
-}
-
-.project-results u {
-    font-weight: bold;
-    color: #003366;
-}
-
-/* Style pour les types de projets (si vous avez des icônes) */
-.project-type {
-    display: inline-block;
-    background-color: #e6f2ff;
-    color: #003366;
-    padding: 3px 8px;
-    border-radius: 3px;
-    font-size: 12px;
-    margin-left: 10px;
-    vertical-align: middle;
+    
+    .skills-container {
+        flex-direction: column;
+    }
+    
+    .image-container {
+        height: 250px; /* Hauteur fixe pour mobile */
+    }
+    
+    .buttons {
+        flex-direction: column; /* Revenir à l'empilement vertical sur mobile */
+    }
+    
+    .download-button {
+        width: 90%; /* Reprendre la largeur en pourcentage sur mobile */
+    }
 }
