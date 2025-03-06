@@ -75,23 +75,34 @@ nav a:hover {
 
 /* 🔹 Style des boutons */
 .button {
-    background-color: #4A76A8;
+    background-color: #4A76A8; /* Couleur par défaut, sera remplacée par les classes spécifiques */
     color: white;
-    padding: 20px 35px; /* Augmenté de 15px 30px à 20px 35px */
-    font-size: 1.4em; /* Augmenté de 1.2em à 1.4em */
+    padding: 20px 35px;
+    font-size: 1.4em;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    width: calc(50% - 10px); /* Ajustement pour bien tenir en deux colonnes */
+    width: calc(50% - 10px);
     transition: background-color 0.3s ease, transform 0.2s ease;
-    font-weight: bold; /* Ajouté pour plus de visibilité */
+    font-weight: bold;
 }
 
-/* Effet de survol */
+/* Couleurs spécifiques pour chaque bouton du portfolio */
+.button-cv { background-color: #2E8B57; } /* Vert foncé */
+.button-portfolio { background-color: #3A6EA5; } /* Bleu */
+.button-projets { background-color: #D2691E; } /* Marron */
+.button-contact { background-color: #8B0000; } /* Rouge foncé */
+
+/* Effet de survol pour chaque bouton avec un éclaircissement */
+.button-cv:hover { background-color: #3aab6b; }
+.button-portfolio:hover { background-color: #4a8ed0; }
+.button-projets:hover { background-color: #e07f3a; }
+.button-contact:hover { background-color: #b30000; }
+
+/* Effet général de survol avec scale */
 .button:hover {
-    background-color: #2C497F;
     transform: scale(1.05);
 }
 
