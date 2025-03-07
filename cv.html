@@ -43,5 +43,32 @@
         </div>
     </div>
 
+  <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 CORRE Alexandre - Tous droits réservés</p>
+        <p>Dernière mise à jour : 07/03/2025</p>
+    </footer>
+
+    <!-- Script JS pour afficher/cacher les projets -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const years = document.querySelectorAll(".year");
+
+            years.forEach(year => {
+                year.addEventListener("click", function() {
+                    const target = this.getAttribute("data-target");
+                    const projects = document.getElementById(target);
+
+                    // Vérifie si la section est déjà visible
+                    if (projects.style.display === "none" || projects.style.display === "") {
+                        projects.style.display = "block"; // Affiche la section
+                    } else {
+                        projects.style.display = "none"; // Cache la section
+                    }
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
