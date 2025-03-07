@@ -46,7 +46,7 @@ nav a:hover {
     background-color: #F0F4F8;
     color: #333;
     text-align: justify;
-    padding: 40px 20px;
+    padding: 40px 60px; /* Modifié pour avoir une marge égale à gauche et à droite */
     font-size: 1.2em;
     width: calc(100% - 40px);
     margin: 40px auto;
@@ -54,7 +54,7 @@ nav a:hover {
     max-width: 2000px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid #3A6EA5;
-    padding-left: 60px;
+    /* Supprimez la ligne padding-left: 60px; */
 }
 
 .presentation p {
