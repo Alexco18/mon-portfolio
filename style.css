@@ -254,16 +254,20 @@ footer a:hover {
     transition: background-color 0.3s;
     
     /* Nouvelles propriétés pour aligner l'image et le texte */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centre le contenu */
+      display: flex !important; /* Force l'utilisation de flexbox */
+    flex-direction: row !important; /* Force l'orientation horizontale */
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important; /* Empêche le retour à la ligne */
 }
 
 /* Style pour l'icône dans le bouton d'année */
 .year-icon {
-    height: 30px; /* Ajustez selon la taille souhaitée */
+     height: 30px;
     width: auto;
-    margin-right: 15px; /* Espace entre l'icône et le texte */
+    margin-right: 15px;
+    display: inline-block !important; /* Force l'affichage en ligne */
+    flex-shrink: 0 !important; /* Empêche l'image de rétrécir */
 }
 
 /* 🔹 Couleur spécifique par année */
