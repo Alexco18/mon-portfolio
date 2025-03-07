@@ -266,6 +266,7 @@ footer a:hover {
 .year-2023 { background-color: #3A6EA5; } /* Bleu */
 .year-2022 { background-color: #D2691E; } /* Marron */
 .year-2021 { background-color: #8B0000; } /* Rouge foncé */
+.year-2020 { background-color: #8B0600; } 
 
 /* 🔹 Effet de survol */
 .year:hover {
