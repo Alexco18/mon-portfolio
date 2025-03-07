@@ -54,7 +54,6 @@ nav a:hover {
     max-width: 2000px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid #3A6EA5;
-    /* Supprimez la ligne padding-left: 60px; */
 }
 
 .presentation p {
@@ -75,19 +74,19 @@ nav a:hover {
 
 /* 🔹 Style des boutons */
 .button {
-        background-color: #4A76A8; /* Couleur par défaut, sera remplacée par les classes spécifiques */
+    background-color: #4A76A8; /* Couleur par défaut, sera remplacée par les classes spécifiques */
     color: white;
-        padding: 20px 35px;
+    padding: 20px 35px;
     font-size: 1.4em;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     display: inline-block;
-        width: calc(50% - 10px);
+    width: calc(50% - 10px);
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-weight: bold; /* Ajouté pour plus de visibilité */
-   }
+}
 
 
 /* Couleurs spécifiques pour chaque bouton du portfolio */
@@ -104,7 +103,6 @@ nav a:hover {
 
 /* Effet général de survol avec scale */
 .button:hover {
-    
     transform: scale(1.05);
 }
 
@@ -249,16 +247,23 @@ footer a:hover {
     color: white;
     padding: 20px;
     font-size: 1.5em;
-    text-align: center;
     width: calc(100% - 40px);
     max-width: 2000px;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
+    
+    /* Nouvelles propriétés pour aligner l'image et le texte */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre le contenu */
 }
 
-.year:hover {
-    background-color: #3A6EA5;
+/* Style pour l'icône dans le bouton d'année */
+.year-icon {
+    height: 30px; /* Ajustez selon la taille souhaitée */
+    width: auto;
+    margin-right: 15px; /* Espace entre l'icône et le texte */
 }
 
 /* 🔹 Couleur spécifique par année */
