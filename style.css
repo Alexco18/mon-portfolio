@@ -54,7 +54,6 @@ nav a:hover {
     max-width: 2000px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid #3A6EA5;
-    /* Supprimez la ligne padding-left: 60px; */
 }
 
 .presentation p {
@@ -75,20 +74,19 @@ nav a:hover {
 
 /* 🔹 Style des boutons */
 .button {
-        background-color: #4A76A8; /* Couleur par défaut, sera remplacée par les classes spécifiques */
+    background-color: #4A76A8; /* Couleur par défaut, sera remplacée par les classes spécifiques */
     color: white;
-        padding: 20px 35px;
+    padding: 20px 35px;
     font-size: 1.4em;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     display: inline-block;
-        width: calc(50% - 10px);
+    width: calc(50% - 10px);
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-weight: bold; /* Ajouté pour plus de visibilité */
-   }
-
+}
 
 /* Couleurs spécifiques pour chaque bouton du portfolio */
 .button-cv { background-color: #2E8B57; } /* Vert foncé */
@@ -104,7 +102,6 @@ nav a:hover {
 
 /* Effet général de survol avec scale */
 .button:hover {
-    
     transform: scale(1.05);
 }
 
@@ -268,7 +265,6 @@ footer a:hover {
 .year-2021 { background-color: #B22222; } /* Rouge moins foncé */
 .year-2020 { background-color: #C0392B; } /* Rouge atténué */
 
-
 /* 🔹 Effet de survol */
 .year:hover {
     filter: brightness(1.2);
@@ -321,7 +317,7 @@ footer a:hover {
     font-weight: bold;
 }
 
-/* 🔹 Rectangle "Objectif(s)" - Augmenter la hauteur */
+/* 🔹 Rectangle "Objectif(s)" - Modifié pour enlever le gras du texte descriptif */
 .project-objective {
     background-color: #2C497F;
     color: white;
@@ -329,13 +325,19 @@ footer a:hover {
     font-size: 1.2em;
     text-align: left;
     border-radius: 5px;
-    height: 250px; /* Augmenté de 220px à 250px */
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    font-weight: bold;
+    font-weight: normal; /* Changé de bold à normal */
     overflow-y: auto;
+}
+
+/* Nouveau style pour conserver les titres et sous-titres en gras */
+.project-objective u,
+.project-objective div:first-child {
+    font-weight: bold;
 }
 
 /* 🔹 Rectangle "Résultat(s)" */
