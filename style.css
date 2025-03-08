@@ -262,11 +262,12 @@ footer a:hover {
 }
 
 /* 🔹 Couleur spécifique par année */
-.year-2024 { background-color: #2E8B57; } /* Vert foncé */
-.year-2023 { background-color: #3A6EA5; } /* Bleu */
-.year-2022 { background-color: #D2691E; } /* Marron */
-.year-2021 { background-color: #8B0000; } /* Rouge foncé */
-.year-2020 { background-color: #8B0600; } 
+.year-2024 { background-color: #5CBF7D; } /* Vert plus clair */
+.year-2023 { background-color: #5C9EE1; } /* Bleu plus lumineux */
+.year-2022 { background-color: #E08E42; } /* Marron plus doux */
+.year-2021 { background-color: #C04040; } /* Rouge atténué */
+.year-2020 { background-color: #A83232; } /* Rouge foncé mais moins sombre */
+
 
 /* 🔹 Effet de survol */
 .year:hover {
